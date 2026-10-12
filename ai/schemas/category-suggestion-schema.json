@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CategorySuggestionResponse",
+  "type": "object",
+  "properties": {
+    "ticket_id": {
+      "type": "string",
+      "description": "Identifier sementara atau referensi tiket"
+    },
+    "suggestions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "Kursi",
+              "Meja",
+              "AC",
+              "Proyektor",
+              "Kelistrikan/Lampu",
+              "Pintu & Jendela",
+              "Sanitasi/Toilet",
+              "Lainnya"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "description": "Indikasi kondisi fisik kerusakan yang teramati"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "description": "Tingkat keyakinan model terhadap kategori yang disarankan"
+          }
+        },
+        "required": ["category", "condition", "confidence"]
+      }
+    },
+    "detected_objects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Objek-objek utama yang dikenali pada citra"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Penjelasan singkat dalam bahasa Indonesia mengenai alasan penentuan kategori"
+    }
+  },
+  "required": ["suggestions", "explanation"]
+}
