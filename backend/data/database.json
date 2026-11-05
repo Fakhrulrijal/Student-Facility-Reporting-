@@ -1,0 +1,139 @@
+{
+  "PENGGUNA": [
+    {
+      "id_user": "USR-001",
+      "nama": "Andrean",
+      "email": "andrean@kampus.ac.id",
+      "password": "$2b$04$x1OgW6x.prkPBqYHJGgAves7G.mMZ.41tBlLOisy9gPYP1ZwamEeG",
+      "role": "Mahasiswa",
+      "nomor_induk": "12345678",
+      "created_at": "2026-11-05T17:10:37.216795+00:00"
+    },
+    {
+      "id_user": "USR-002",
+      "nama": "Administrator Fasilitas",
+      "email": "admin@kampus.ac.id",
+      "password": "$2b$04$x1OgW6x.prkPBqYHJGgAves7G.mMZ.41tBlLOisy9gPYP1ZwamEeG",
+      "role": "Admin",
+      "nomor_induk": "19850101",
+      "created_at": "2026-11-05T17:10:37.216811+00:00"
+    },
+    {
+      "id_user": "USR-34905EC8",
+      "nama": "Fakhrul Rijal",
+      "email": "fakhrul@kampus.ac.id",
+      "password": "$2b$04$p0N2uKTv97UGCu.EXvSp..It2i/.O8r2My2HdJdRS2qKjou/nNd6S",
+      "role": "Mahasiswa",
+      "nomor_induk": "22095111",
+      "created_at": "2026-11-05T17:10:37.472976+00:00"
+    }
+  ],
+  "DETAIL_AKUN": [
+    {
+      "id_detail": "DET-001",
+      "id_user": "USR-001",
+      "fakultas": "Ilmu Komputer",
+      "prodi": "Teknik Informatika",
+      "telepon": "081234567890",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-05T17:10:37.216808+00:00"
+    },
+    {
+      "id_detail": "DET-002",
+      "id_user": "USR-002",
+      "fakultas": "Biro Fasilitas & Logistik",
+      "prodi": "Administrasi Fasilitas Kampus",
+      "telepon": "081298765432",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-05T17:10:37.216814+00:00"
+    },
+    {
+      "id_detail": "DET-7688002A",
+      "id_user": "USR-34905EC8",
+      "fakultas": "Ilmu Komputer",
+      "prodi": "Informatika",
+      "telepon": "-",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-05T17:10:37.472976+00:00"
+    }
+  ],
+  "FASILITAS": [
+    {
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "nama_fasilitas": "Kursi Kuliah Ergonomis",
+      "lokasi_gedung": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "kondisi_terakhir": "Normal",
+      "created_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id_fasilitas": "FAS-002",
+      "kode_qr": "PJ-B101-01",
+      "nama_fasilitas": "Proyektor Ruang B101",
+      "lokasi_gedung": "Ruang B101 – Gedung B",
+      "kategori": "Proyektor",
+      "kondisi_terakhir": "Normal",
+      "created_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id_fasilitas": "FAS-003",
+      "kode_qr": "AC-L003-02",
+      "nama_fasilitas": "Air Conditioner 2 PK",
+      "lokasi_gedung": "Lab 3 – Gedung C",
+      "kategori": "AC",
+      "kondisi_terakhir": "Normal",
+      "created_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id_fasilitas": "FAS-004",
+      "kode_qr": "MJ-A001-03",
+      "nama_fasilitas": "Meja Dosen & Mahasiswa",
+      "lokasi_gedung": "Ruang A001 – Gedung A",
+      "kategori": "Meja",
+      "kondisi_terakhir": "Normal",
+      "created_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id_fasilitas": "FAS-005",
+      "kode_qr": "LP-C204-05",
+      "nama_fasilitas": "Lampu LED Plafon",
+      "lokasi_gedung": "Ruang C204 – Gedung C",
+      "kategori": "Lampu",
+      "kondisi_terakhir": "Normal",
+      "created_at": "2026-10-01T08:00:00Z"
+    }
+  ],
+  "LAPORAN": [
+    {
+      "id_laporan": "LAP-A0BD72C9",
+      "nomor_tiket": "#TK-0012",
+      "id_user": "USR-34905EC8",
+      "nama_pelapor": "Fakhrul Rijal",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/e37507407f9042cd9eac389991a5422e.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-05T17:10:37.568061+00:00"
+    }
+  ],
+  "STATUS_TIKET": [
+    {
+      "id_status": "STS-0001",
+      "id_laporan": "LAP-A0BD72C9",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-34905EC8",
+      "timestamp": "2026-11-05T17:10:37.568061+00:00"
+    }
+  ],
+  "TINDAKAN_PENANGANAN": [],
+  "ANALISIS_AI": []
+}
