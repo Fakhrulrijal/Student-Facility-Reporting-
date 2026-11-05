@@ -51,3 +51,32 @@ class LaporanDetailResponse(BaseModel):
     foto_url: str
     status: str
     created_at: str
+
+class TimelineStageItem(BaseModel):
+    stage_key: str  # "diajukan", "ditinjau", "diproses", "selesai"
+    stage_name: str
+    is_completed: bool
+    is_current: bool
+    timestamp: Optional[str] = None
+    catatan: Optional[str] = None
+    petugas: Optional[str] = None
+
+class StatusTiketLog(BaseModel):
+    id_status: str
+    id_laporan: str
+    status: str
+    catatan: str
+    updated_by: Optional[str] = None
+    timestamp: str
+
+class LaporanHistoryResponse(BaseModel):
+    id_laporan: str
+    nomor_tiket: str
+    status_saat_ini: str
+    timeline: List[TimelineStageItem]
+    logs: List[StatusTiketLog]
+
+class UpdateStatusRequest(BaseModel):
+    status: str
+    catatan: Optional[str] = None
+    updated_by: Optional[str] = "Admin Fasilitas"

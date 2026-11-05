@@ -61,10 +61,15 @@ def run_tests():
     print("✅ Validasi Password < 8 karakter tertolak (HTTP 422): OK")
 
     # 2.4 Berhasil Registrasi Akun Mahasiswa Baru
+    import uuid
+    uid = uuid.uuid4().hex[:6]
+    nim_new = f"{int(uuid.uuid4().int % 90000000 + 10000000)}"
+    email_new = f"fakhrul.{uid}@kampus.ac.id"
+
     res = client.post("/api/v1/auth/register", json={
         "nama": "Fakhrul Rijal",
-        "nomor_induk": "22095111",
-        "email": "fakhrul@kampus.ac.id",
+        "nomor_induk": nim_new,
+        "email": email_new,
         "password": "secretPassword123",
         "role": "Mahasiswa",
         "fakultas": "Ilmu Komputer",
@@ -79,8 +84,8 @@ def run_tests():
     # 2.5 Error: Duplikasi Registrasi
     res_dup = client.post("/api/v1/auth/register", json={
         "nama": "Fakhrul Rijal Clone",
-        "nomor_induk": "22095111",
-        "email": "fakhrul@kampus.ac.id",
+        "nomor_induk": nim_new,
+        "email": email_new,
         "password": "secretPassword123",
         "role": "Mahasiswa"
     })
@@ -89,7 +94,7 @@ def run_tests():
 
     # 2.6 Login Gagal (Password salah)
     res_fail = client.post("/api/v1/auth/login", json={
-        "nomor_induk_atau_email": "22095111",
+        "nomor_induk_atau_email": nim_new,
         "password": "wrongPassword"
     })
     assert res_fail.status_code == 401, f"Expected 401 for wrong password, got {res_fail.status_code}"
@@ -97,7 +102,7 @@ def run_tests():
 
     # 2.7 Login Berhasil dengan NIM
     res_login = client.post("/api/v1/auth/login", json={
-        "nomor_induk_atau_email": "22095111",
+        "nomor_induk_atau_email": nim_new,
         "password": "secretPassword123"
     })
     assert res_login.status_code == 200
@@ -106,7 +111,7 @@ def run_tests():
 
     # 2.8 Login Berhasil dengan Email
     res_login_email = client.post("/api/v1/auth/login", json={
-        "nomor_induk_atau_email": "fakhrul@kampus.ac.id",
+        "nomor_induk_atau_email": email_new,
         "password": "secretPassword123"
     })
     assert res_login_email.status_code == 200
@@ -115,7 +120,7 @@ def run_tests():
     # 2.9 Akses Profil Terproteksi via Bearer Token
     res_me = client.get("/api/v1/auth/me", headers={"Authorization": f"Bearer {token}"})
     assert res_me.status_code == 200
-    assert res_me.json()["nomor_induk"] == "22095111"
+    assert res_me.json()["nomor_induk"] == nim_new
     print("✅ Akses Protected Route (/api/v1/auth/me) via JWT: OK")
 
     # 3. MOD-02: Pelaporan Kerusakan & QR Scanner

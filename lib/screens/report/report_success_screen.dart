@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/report_provider.dart';
 import '../home/home_screen.dart';
+import '../home/main_navigation_shell.dart';
 
 class ReportSuccessScreen extends StatelessWidget {
   const ReportSuccessScreen({Key? key}) : super(key: key);
@@ -102,7 +103,7 @@ class ReportSuccessScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (_) => const HomeScreen()),
+                      MaterialPageRoute(builder: (_) => const MainNavigationShell(initialIndex: 1)),
                       (route) => false,
                     );
                   },
@@ -121,7 +122,7 @@ class ReportSuccessScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (_) => const HomeScreen()),
+                      MaterialPageRoute(builder: (_) => const MainNavigationShell(initialIndex: 0)),
                       (route) => false,
                     );
                   },

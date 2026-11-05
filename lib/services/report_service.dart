@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/facility_model.dart';
 import '../models/report_model.dart';
+import '../models/timeline_model.dart';
 import 'api_service.dart';
 
 class ReportService {
@@ -87,6 +88,35 @@ class ReportService {
       return list.map((e) => ReportModel.fromJson(e)).toList();
     } else {
       throw Exception('Gagal memuat histori laporan.');
+    }
+  }
+
+  // MOD-03: Ambil Laporan Pengguna Berdasarkan User ID / NIM
+  Future<List<ReportModel>> getUserReports(String userId, {String? statusFilter}) async {
+    String query = '';
+    if (statusFilter != null && statusFilter.isNotEmpty && statusFilter != 'Semua') {
+      query = '?status_filter=$statusFilter';
+    }
+    final url = Uri.parse('${ApiService.baseUrl}/api/v1/laporan/user/$userId$query');
+    final response = await _client.get(url);
+    if (response.statusCode == 200) {
+      final List<dynamic> list = jsonDecode(response.body);
+      return list.map((e) => ReportModel.fromJson(e)).toList();
+    } else {
+      throw Exception('Gagal memuat laporan pengguna.');
+    }
+  }
+
+  // MOD-03: Ambil Rincian Timeline Histori Tiket
+  Future<ReportHistoryModel> getReportHistory(String idLaporan) async {
+    final cleanId = idLaporan.trim().replaceAll('#', '');
+    final url = Uri.parse('${ApiService.baseUrl}/api/v1/laporan/$cleanId/history');
+    final response = await _client.get(url);
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      return ReportHistoryModel.fromJson(data);
+    } else {
+      throw Exception('Gagal memuat riwayat status tiket.');
     }
   }
 }

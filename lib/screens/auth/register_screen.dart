@@ -4,6 +4,7 @@ import '../../providers/auth_provider.dart';
 import '../../widgets/custom_text_field.dart';
 import '../../widgets/error_dialog.dart';
 import '../home/home_screen.dart';
+import '../home/main_navigation_shell.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -103,7 +104,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       );
       Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
+        MaterialPageRoute(builder: (_) => const MainNavigationShell()),
         (route) => false,
       );
     } else if (mounted) {

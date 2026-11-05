@@ -172,6 +172,64 @@ class JsonDatabase:
     def get_reports(self) -> List[Dict[str, Any]]:
         return self.load_data().get("LAPORAN", [])
 
+    def get_reports_by_user(self, id_or_nim: str) -> List[Dict[str, Any]]:
+        clean_id = id_or_nim.strip()
+        matched_user_ids = {clean_id}
+        # Cek apakah ini NIM
+        user = self.find_user_by_nomor_induk(clean_id)
+        if user:
+            matched_user_ids.add(user["id_user"])
+        # Cek jika id_user
+        user_by_id = self.find_user_by_id(clean_id)
+        if user_by_id:
+            matched_user_ids.add(user_by_id["nomor_induk"])
+
+        reports = self.get_reports()
+        return [
+            r for r in reports
+            if r.get("id_user") in matched_user_ids or r.get("nomor_induk_pelapor") in matched_user_ids
+        ]
+
+    def get_history_by_report(self, id_laporan_or_ticket: str) -> List[Dict[str, Any]]:
+        clean = id_laporan_or_ticket.strip().lstrip("#")
+        # Cari id_laporan yang cocok
+        target_id = None
+        for r in self.get_reports():
+            if r.get("id_laporan") == id_laporan_or_ticket or r.get("nomor_tiket", "").lstrip("#") == clean:
+                target_id = r.get("id_laporan")
+                break
+
+        if not target_id:
+            target_id = id_laporan_or_ticket
+
+        all_status = self.load_data().get("STATUS_TIKET", [])
+        return [s for s in all_status if s.get("id_laporan") == target_id]
+
+    def update_report_status(self, id_laporan: str, new_status: str, catatan: str = "", updated_by: str = "Admin"):
+        data = self.load_data()
+        target_report = None
+        clean = id_laporan.strip().lstrip("#")
+        for r in data.get("LAPORAN", []):
+            if r.get("id_laporan") == id_laporan or r.get("nomor_tiket", "").lstrip("#") == clean:
+                r["status"] = new_status
+                target_report = r
+                break
+
+        if target_report:
+            now_iso = datetime.now(timezone.utc).isoformat()
+            status_entry = {
+                "id_status": f"STS-{len(data.get('STATUS_TIKET', [])) + 1:04d}",
+                "id_laporan": target_report.get("id_laporan"),
+                "status": new_status,
+                "catatan": catatan or f"Status tiket diperbarui menjadi {new_status}.",
+                "updated_by": updated_by,
+                "timestamp": now_iso
+            }
+            data["STATUS_TIKET"].append(status_entry)
+            self.save_data(data)
+            return target_report
+        return None
+
     def add_report(self, report_dict: Dict[str, Any]):
         data = self.load_data()
         data["LAPORAN"].append(report_dict)

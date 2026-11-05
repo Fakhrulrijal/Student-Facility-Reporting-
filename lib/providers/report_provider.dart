@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import '../models/facility_model.dart';
 import '../models/report_model.dart';
+import '../models/timeline_model.dart';
 import '../services/report_service.dart';
 
 class ReportProvider with ChangeNotifier {
@@ -26,6 +27,16 @@ class ReportProvider with ChangeNotifier {
   ReportModel? _lastSubmittedReport;
   List<ReportModel> _reports = [];
 
+  // MOD-03 State
+  List<ReportModel> _userReports = [];
+  bool _isLoadingUserReports = false;
+  String? _userReportsError;
+  String _selectedTab = 'Semua'; // 'Semua', 'Diproses', 'Selesai'
+
+  ReportHistoryModel? _currentReportHistory;
+  bool _isLoadingHistory = false;
+  String? _historyError;
+
   // Getters
   String? get photoPath => _photoPath;
   Uint8List? get photoBytes => _photoBytes;
@@ -42,6 +53,60 @@ class ReportProvider with ChangeNotifier {
   String? get submitError => _submitError;
   ReportModel? get lastSubmittedReport => _lastSubmittedReport;
   List<ReportModel> get reports => _reports;
+
+  // MOD-03 Getters
+  List<ReportModel> get userReports => _userReports;
+  bool get isLoadingUserReports => _isLoadingUserReports;
+  String? get userReportsError => _userReportsError;
+  String get selectedTab => _selectedTab;
+  ReportHistoryModel? get currentReportHistory => _currentReportHistory;
+  bool get isLoadingHistory => _isLoadingHistory;
+  String? get historyError => _historyError;
+
+  // Filtered reports for current tab
+  List<ReportModel> get filteredUserReports {
+    if (_selectedTab == 'Semua') return _userReports;
+    return _userReports.where((r) => r.status.toLowerCase() == _selectedTab.toLowerCase()).toList();
+  }
+
+  void setSelectedTab(String tab) {
+    _selectedTab = tab;
+    notifyListeners();
+  }
+
+  Future<void> fetchUserReports(String userId) async {
+    _isLoadingUserReports = true;
+    _userReportsError = null;
+    notifyListeners();
+
+    try {
+      final list = await _reportService.getUserReports(userId);
+      _userReports = list;
+      _isLoadingUserReports = false;
+      notifyListeners();
+    } catch (e) {
+      _isLoadingUserReports = false;
+      _userReportsError = e.toString().replaceAll('Exception: ', '');
+      notifyListeners();
+    }
+  }
+
+  Future<void> fetchReportHistory(String idLaporan) async {
+    _isLoadingHistory = true;
+    _historyError = null;
+    notifyListeners();
+
+    try {
+      final hist = await _reportService.getReportHistory(idLaporan);
+      _currentReportHistory = hist;
+      _isLoadingHistory = false;
+      notifyListeners();
+    } catch (e) {
+      _isLoadingHistory = false;
+      _historyError = e.toString().replaceAll('Exception: ', '');
+      notifyListeners();
+    }
+  }
 
   void setPhoto(String path, {Uint8List? bytes, String? name}) {
     _photoPath = path;

@@ -4,6 +4,9 @@ import '../../providers/auth_provider.dart';
 import '../../providers/report_provider.dart';
 import '../auth/login_screen.dart';
 import '../report/create_report_screen.dart';
+import '../tracking/my_reports_screen.dart';
+import '../tracking/report_detail_screen.dart';
+import '../../models/report_model.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -145,47 +148,56 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // Card 2: Laporan Saya
-            Container(
-              padding: const EdgeInsets.all(18),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: const Color(0xFFE2E8F0)),
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFEFF6FF),
-                      borderRadius: BorderRadius.circular(10),
+            // Card 2: Laporan Saya (Slide 6 & Slide 14)
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const MyReportsScreen()),
+                );
+              },
+              borderRadius: BorderRadius.circular(14),
+              child: Container(
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: const Color(0xFFE2E8F0)),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFEFF6FF),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(Icons.assignment_outlined, color: Color(0xFF1E3A8A)),
                     ),
-                    child: const Icon(Icons.assignment_outlined, color: Color(0xFF1E3A8A)),
-                  ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Laporan Saya',
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF0F172A),
+                    const SizedBox(width: 14),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Laporan Saya',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF0F172A),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 2),
-                        Text(
-                          'Pantau status tiket laporanmu',
-                          style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
-                        ),
-                      ],
+                          const SizedBox(height: 2),
+                          Text(
+                            'Pantau status tiket laporanmu',
+                            style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Colors.grey),
-                ],
+                    const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Colors.grey),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 28),
@@ -203,80 +215,105 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const MyReportsScreen()),
+                    );
+                  },
                   child: const Text('Lihat Semua'),
                 ),
               ],
             ),
             const SizedBox(height: 8),
 
-            // Dummy / Latest Ticket Card
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFFE2E8F0)),
-              ),
-              child: Row(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      width: 54,
-                      height: 54,
-                      color: Colors.blueGrey.shade100,
-                      child: const Icon(Icons.chair_outlined, color: Color(0xFF1E3A8A)),
-                    ),
-                  ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          reportProv.lastSubmittedReport?.nomorTiket ?? '#TK-0012',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue.shade700,
-                          ),
-                        ),
-                        const SizedBox(height: 2),
-                        Text(
-                          reportProv.lastSubmittedReport != null
-                              ? '${reportProv.lastSubmittedReport!.kategori} - ${reportProv.lastSubmittedReport!.lokasi}'
-                              : 'Kursi - Ruang A002',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                            color: Color(0xFF1E293B),
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          'Diajukan pada 29 Oktober 2026',
-                          style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFFEF3C7),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: const Text(
-                      'Diajukan',
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: Color(0xFFB45309),
-                        fontWeight: FontWeight.bold,
+            // Latest Ticket Card
+            InkWell(
+              onTap: () {
+                final report = reportProv.lastSubmittedReport ?? ReportModel(
+                  idLaporan: 'LAP-SAMPLE-01',
+                  nomorTiket: '#TK-0012',
+                  lokasi: 'Ruang A002 – Gedung A',
+                  kategori: 'Kursi',
+                  tingkatKeparahan: 'Sedang',
+                  deskripsi: 'Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.',
+                  fotoUrl: '/uploads/sample.jpg',
+                  status: 'Diajukan',
+                  createdAt: '2026-10-29T10:15:00Z',
+                );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => ReportDetailScreen(report: report)),
+                );
+              },
+              borderRadius: BorderRadius.circular(12),
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: const Color(0xFFE2E8F0)),
+                ),
+                child: Row(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Container(
+                        width: 54,
+                        height: 54,
+                        color: Colors.blueGrey.shade100,
+                        child: const Icon(Icons.chair_outlined, color: Color(0xFF1E3A8A)),
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 14),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            reportProv.lastSubmittedReport?.nomorTiket ?? '#TK-0012',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue.shade700,
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            reportProv.lastSubmittedReport != null
+                                ? '${reportProv.lastSubmittedReport!.kategori} - ${reportProv.lastSubmittedReport!.lokasi}'
+                                : 'Kursi - Ruang A002',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Color(0xFF1E293B),
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Diajukan pada 29 Oktober 2026',
+                            style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFEF3C7),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Text(
+                        'Diajukan',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Color(0xFFB45309),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
