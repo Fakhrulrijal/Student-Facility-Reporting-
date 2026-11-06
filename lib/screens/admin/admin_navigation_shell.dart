@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'admin_dashboard_screen.dart';
 import 'admin_manage_reports_screen.dart';
+import '../analytics/ai_summary_screen.dart';
 
 class AdminNavigationShell extends StatefulWidget {
   final int initialIndex;
@@ -31,7 +32,7 @@ class _AdminNavigationShellState extends State<AdminNavigationShell> {
     final List<Widget> pages = [
       AdminDashboardScreen(onNavigateTab: _onNavigate),
       const AdminManageReportsScreen(),
-      _buildPlaceholderScreen('Rangkuman Eksekutif AI', 'Modul 5 (MOD-05) - Analitik & Rangkuman Tren Kerusakan AI'),
+      const AiSummaryScreen(),
       _buildPlaceholderScreen('Prioritas Penanganan AI', 'Modul 6 (MOD-06) - Engine Scoring & Ranking Prioritas AI'),
     ];
 
