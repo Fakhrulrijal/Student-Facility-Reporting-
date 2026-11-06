@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from app.core.config import UPLOAD_DIR
-from app.routers import auth, facilities, reports
+from app.routers import auth, facilities, reports, admin
 
 app = FastAPI(
     title="Aplikasi Pelaporan Fasilitas Kampus - REST API",
@@ -46,13 +46,19 @@ app.mount("/uploads", StaticFiles(directory=str(UPLOAD_DIR)), name="uploads")
 app.include_router(auth.router)
 app.include_router(facilities.router)
 app.include_router(reports.router)
+app.include_router(admin.router)
 
 @app.get("/", tags=["Health Check"])
 def root():
     return {
         "status": "online",
         "app": "Aplikasi Pelaporan Fasilitas Kampus",
-        "modules_active": ["MOD-01 Autentikasi & User Management", "MOD-02 Pelaporan Kerusakan & QR Scanner"],
+        "modules_active": [
+            "MOD-01 Autentikasi & User Management",
+            "MOD-02 Pelaporan Kerusakan & QR Scanner",
+            "MOD-03 Tracking Status & Histori Laporan",
+            "MOD-04 Dashboard Admin & Kelola Tiket"
+        ],
         "docs": "/docs"
     }
 

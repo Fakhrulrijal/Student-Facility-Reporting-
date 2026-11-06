@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/auth_provider.dart';
 import 'providers/report_provider.dart';
+import 'providers/admin_provider.dart';
 import 'screens/auth/login_screen.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class StudentFacilityReportingApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => ReportProvider()),
+        ChangeNotifierProvider(create: (_) => AdminProvider()),
       ],
       child: MaterialApp(
         title: 'Student Facility Reporting',

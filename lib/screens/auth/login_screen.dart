@@ -5,6 +5,7 @@ import '../../widgets/custom_text_field.dart';
 import '../../widgets/error_dialog.dart';
 import '../home/home_screen.dart';
 import '../home/main_navigation_shell.dart';
+import '../admin/admin_navigation_shell.dart';
 import 'register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -58,10 +59,17 @@ class _LoginScreenState extends State<LoginScreen> {
     final success = await auth.login(nim, password);
 
     if (success && mounted) {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const MainNavigationShell()),
-      );
+      if (auth.user?.role == 'Admin') {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const AdminNavigationShell()),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const MainNavigationShell()),
+        );
+      }
     } else if (mounted) {
       setState(() {
         _globalError = auth.errorMessage ?? 'NIM atau password salah. Silakan coba lagi.';

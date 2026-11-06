@@ -71,6 +71,24 @@
       "role": "Mahasiswa",
       "nomor_induk": "32190861",
       "created_at": "2026-11-05T17:25:44.083162+00:00"
+    },
+    {
+      "id_user": "USR-0BD82415",
+      "nama": "Fakhrul Rijal",
+      "email": "fakhrul.1aa7a1@kampus.ac.id",
+      "password": "$2b$04$fzKDB6JRPN5I8yd6mepQIu1zZ/0f7jCXXO512fM02rURhjtuX3Tgy",
+      "role": "Mahasiswa",
+      "nomor_induk": "52590409",
+      "created_at": "2026-11-06T09:03:56.376093+00:00"
+    },
+    {
+      "id_user": "USR-0DA8DB7E",
+      "nama": "Andrean Tracking",
+      "email": "andrean.44bb31@kampus.ac.id",
+      "password": "$2b$04$9VAr0O61xwTRZivZAxXTnOkKXMuZwYyxdx9TS66QLlMFtpEv549iO",
+      "role": "Mahasiswa",
+      "nomor_induk": "25824203",
+      "created_at": "2026-11-06T09:03:57.662999+00:00"
     }
   ],
   "DETAIL_AKUN": [
@@ -153,6 +171,26 @@
       "foto_profil": "",
       "status_aktif": true,
       "created_at": "2026-11-05T17:25:44.083162+00:00"
+    },
+    {
+      "id_detail": "DET-921A35A1",
+      "id_user": "USR-0BD82415",
+      "fakultas": "Ilmu Komputer",
+      "prodi": "Informatika",
+      "telepon": "-",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-06T09:03:56.376093+00:00"
+    },
+    {
+      "id_detail": "DET-A64C5284",
+      "id_user": "USR-0DA8DB7E",
+      "fakultas": "Fakultas Teknik & Ilmu Komputer",
+      "prodi": "Teknik Informatika",
+      "telepon": "-",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-06T09:03:57.662999+00:00"
     }
   ],
   "FASILITAS": [
@@ -277,6 +315,96 @@
       "foto_url": "/uploads/88c93c5e6c3949a6a4d1de9c398e6014.jpg",
       "status": "Selesai",
       "created_at": "2026-11-05T17:25:44.124511+00:00"
+    },
+    {
+      "id_laporan": "LAP-5ECD8903",
+      "nomor_tiket": "#TK-0017",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/4ab75d30c7ff48bda02be4ef9b9561b5.jpg",
+      "status": "Diproses",
+      "created_at": "2026-11-06T08:55:06.396456+00:00"
+    },
+    {
+      "id_laporan": "LAP-D0A3DA98",
+      "nomor_tiket": "#TK-0018",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang B101 – Gedung B",
+      "kategori": "Proyektor",
+      "tingkat_keparahan": "Ringan",
+      "deskripsi": "Remot proyektor baterai habis.",
+      "foto_url": "/uploads/402a13ca6b3e46d3a718a756c77d0505.jpg",
+      "status": "Ditolak",
+      "created_at": "2026-11-06T08:55:06.487055+00:00"
+    },
+    {
+      "id_laporan": "LAP-151B3AF2",
+      "nomor_tiket": "#TK-0019",
+      "id_user": "USR-0BD82415",
+      "nama_pelapor": "Fakhrul Rijal",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/8446678fc570458484a43defc4aa455d.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-06T09:03:56.423841+00:00"
+    },
+    {
+      "id_laporan": "LAP-E844682C",
+      "nomor_tiket": "#TK-0020",
+      "id_user": "USR-0DA8DB7E",
+      "nama_pelapor": "Andrean Tracking",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/426febd3e1c5487f8c5e93e0a3538f77.jpg",
+      "status": "Selesai",
+      "created_at": "2026-11-06T09:03:57.720126+00:00"
+    },
+    {
+      "id_laporan": "LAP-9EAC7CCE",
+      "nomor_tiket": "#TK-0021",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/91a4d62989084f948634217efc1c885f.jpg",
+      "status": "Diproses",
+      "created_at": "2026-11-06T09:03:58.998607+00:00"
+    },
+    {
+      "id_laporan": "LAP-5F5140B1",
+      "nomor_tiket": "#TK-0022",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang B101 – Gedung B",
+      "kategori": "Proyektor",
+      "tingkat_keparahan": "Ringan",
+      "deskripsi": "Remot proyektor baterai habis.",
+      "foto_url": "/uploads/8d9d2869f98a40ac8d1121592e3d8ebe.jpg",
+      "status": "Ditolak",
+      "created_at": "2026-11-06T09:03:59.110905+00:00"
     }
   ],
   "STATUS_TIKET": [
@@ -367,8 +495,153 @@
       "catatan": "Perbaikan kursi selesai dilakukan dan sudah layak digunakan kembali.",
       "updated_by": "Teknisi Budi",
       "timestamp": "2026-11-05T17:25:44.233734+00:00"
+    },
+    {
+      "id_status": "STS-0012",
+      "id_laporan": "LAP-5ECD8903",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T08:55:06.396456+00:00"
+    },
+    {
+      "id_status": "STS-0013",
+      "id_laporan": "LAP-5ECD8903",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T08:55:06.456288+00:00"
+    },
+    {
+      "id_status": "STS-0014",
+      "id_laporan": "LAP-D0A3DA98",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T08:55:06.487055+00:00"
+    },
+    {
+      "id_status": "STS-0015",
+      "id_laporan": "LAP-D0A3DA98",
+      "status": "Ditolak",
+      "catatan": "Laporan ditolak: Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T08:55:06.521626+00:00"
+    },
+    {
+      "id_status": "STS-0016",
+      "id_laporan": "LAP-151B3AF2",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-0BD82415",
+      "timestamp": "2026-11-06T09:03:56.423841+00:00"
+    },
+    {
+      "id_status": "STS-0017",
+      "id_laporan": "LAP-E844682C",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-0DA8DB7E",
+      "timestamp": "2026-11-06T09:03:57.720126+00:00"
+    },
+    {
+      "id_status": "STS-0018",
+      "id_laporan": "LAP-E844682C",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Teknisi Budi",
+      "timestamp": "2026-11-06T09:03:57.804148+00:00"
+    },
+    {
+      "id_status": "STS-0019",
+      "id_laporan": "LAP-E844682C",
+      "status": "Selesai",
+      "catatan": "Perbaikan kursi selesai dilakukan dan sudah layak digunakan kembali.",
+      "updated_by": "Teknisi Budi",
+      "timestamp": "2026-11-06T09:03:57.864262+00:00"
+    },
+    {
+      "id_status": "STS-0020",
+      "id_laporan": "LAP-9EAC7CCE",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T09:03:58.998607+00:00"
+    },
+    {
+      "id_status": "STS-0021",
+      "id_laporan": "LAP-9EAC7CCE",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T09:03:59.063733+00:00"
+    },
+    {
+      "id_status": "STS-0022",
+      "id_laporan": "LAP-5F5140B1",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T09:03:59.110905+00:00"
+    },
+    {
+      "id_status": "STS-0023",
+      "id_laporan": "LAP-5F5140B1",
+      "status": "Ditolak",
+      "catatan": "Laporan ditolak: Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T09:03:59.154982+00:00"
     }
   ],
-  "TINDAKAN_PENANGANAN": [],
+  "TINDAKAN_PENANGANAN": [
+    {
+      "id_tindakan": "TDK-0001",
+      "id_laporan": "LAP-5ECD8903",
+      "nomor_tiket": "#TK-0017",
+      "status_akhir": "Diproses",
+      "aksi_teknis": "Perbaiki",
+      "alasan_penolakan": null,
+      "catatan_admin": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T08:55:06.456288+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0002",
+      "id_laporan": "LAP-D0A3DA98",
+      "nomor_tiket": "#TK-0018",
+      "status_akhir": "Ditolak",
+      "aksi_teknis": "Penolakan",
+      "alasan_penolakan": "Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "catatan_admin": null,
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T08:55:06.521626+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0003",
+      "id_laporan": "LAP-9EAC7CCE",
+      "nomor_tiket": "#TK-0021",
+      "status_akhir": "Diproses",
+      "aksi_teknis": "Perbaiki",
+      "alasan_penolakan": null,
+      "catatan_admin": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T09:03:59.063733+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0004",
+      "id_laporan": "LAP-5F5140B1",
+      "nomor_tiket": "#TK-0022",
+      "status_akhir": "Ditolak",
+      "aksi_teknis": "Penolakan",
+      "alasan_penolakan": "Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "catatan_admin": null,
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T09:03:59.154982+00:00"
+    }
+  ],
   "ANALISIS_AI": []
 }

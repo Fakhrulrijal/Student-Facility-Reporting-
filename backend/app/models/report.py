@@ -80,3 +80,43 @@ class UpdateStatusRequest(BaseModel):
     status: str
     catatan: Optional[str] = None
     updated_by: Optional[str] = "Admin Fasilitas"
+
+# MOD-04: Dashboard Admin & Kelola Tiket
+class AdminDashboardSummaryResponse(BaseModel):
+    total_laporan: int
+    menunggu_peninjauan: int
+    diproses: int
+    selesai: int
+    ditolak: int
+    breakdown_kategori: dict
+
+class AdminUpdateStatusRequest(BaseModel):
+    status: str  # "Diproses", "Selesai", "Ditolak"
+    aksi_teknis: Optional[str] = None  # "Perbaiki", "Ganti Baru"
+    catatan: Optional[str] = None
+    alasan_penolakan: Optional[str] = None
+    admin_id: Optional[str] = "USR-002"
+    admin_name: Optional[str] = "Administrator Fasilitas"
+
+class FcmNotificationReceipt(BaseModel):
+    success: bool
+    message_id: str
+    recipient_user_id: str
+    title: str
+    body: str
+    timestamp: str
+
+class AdminUpdateStatusResponse(BaseModel):
+    id_laporan: str
+    nomor_tiket: str
+    status_baru: str
+    aksi_teknis: Optional[str] = None
+    catatan: Optional[str] = None
+    alasan_penolakan: Optional[str] = None
+    notification: FcmNotificationReceipt
+    message: str = "Perubahan tersimpan di database dan notifikasi terkirim ke pelapor."
+
+class AdminReportListResponse(BaseModel):
+    total_laporan: int
+    menunggu_peninjauan: int
+    laporan: List[LaporanDetailResponse]
