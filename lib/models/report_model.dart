@@ -3,6 +3,7 @@ class ReportModel {
   final String nomorTiket;
   final String? idUser;
   final String? namaPelapor;
+  final String? nomorIndukPelapor;
   final String? idFasilitas;
   final String? kodeQr;
   final String lokasi;
@@ -18,6 +19,7 @@ class ReportModel {
     required this.nomorTiket,
     this.idUser,
     this.namaPelapor,
+    this.nomorIndukPelapor,
     this.idFasilitas,
     this.kodeQr,
     required this.lokasi,
@@ -35,6 +37,7 @@ class ReportModel {
       nomorTiket: json['nomor_tiket'] ?? '',
       idUser: json['id_user'],
       namaPelapor: json['nama_pelapor'],
+      nomorIndukPelapor: json['nomor_induk_pelapor'] ?? json['nomor_induk'],
       idFasilitas: json['id_fasilitas'],
       kodeQr: json['kode_qr'],
       lokasi: json['lokasi'] ?? '',

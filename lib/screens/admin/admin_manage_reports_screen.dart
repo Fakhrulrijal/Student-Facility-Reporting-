@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../models/report_model.dart';
 import '../../providers/admin_provider.dart';
 import '../../widgets/status_badge.dart';
 import 'admin_report_detail_screen.dart';

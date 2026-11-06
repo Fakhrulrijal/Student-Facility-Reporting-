@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/report_provider.dart';
-import '../../widgets/custom_text_field.dart';
 import 'qr_scanner_screen.dart';
 import 'review_report_screen.dart';
 

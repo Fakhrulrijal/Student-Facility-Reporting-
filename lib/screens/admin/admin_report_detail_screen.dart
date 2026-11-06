@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../models/report_model.dart';
-import '../../widgets/status_badge.dart';
 import 'admin_action_plan_screen.dart';
 import 'admin_reject_report_screen.dart';
 

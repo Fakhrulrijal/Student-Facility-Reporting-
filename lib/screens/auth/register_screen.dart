@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../widgets/custom_text_field.dart';
 import '../../widgets/error_dialog.dart';
-import '../home/home_screen.dart';
 import '../home/main_navigation_shell.dart';
 
 class RegisterScreen extends StatefulWidget {
