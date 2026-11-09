@@ -42,3 +42,8 @@ GoogleService-Info.plist
 .idea/
 .vscode/
 *.iml
+
+
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep

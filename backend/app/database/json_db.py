@@ -481,4 +481,34 @@ class JsonDatabase:
     def get_ai_analyses(self) -> List[Dict[str, Any]]:
         return self.load_data().get("ANALISIS_AI", [])
 
+    # MOD-06: Simpan & Perbarui Hasil Kalkulasi Prioritas AI
+    def save_prioritization_results(self, prioritized_tickets: List[Dict[str, Any]]) -> Dict[str, Any]:
+        data = self.load_data()
+        now_iso = datetime.now(timezone.utc).isoformat()
+        
+        # Buat entri log analisis di ANALISIS_AI
+        summary_entry = {
+            "id_analisis": f"ANL-PRIO-{uuid.uuid4().hex[:8].upper()}",
+            "jenis": "PRIORITAS_SKOR",
+            "total_tiket_dievaluasi": len(prioritized_tickets),
+            "total_tinggi": sum(1 for t in prioritized_tickets if t.get("kategori_prioritas") == "Tinggi"),
+            "total_sedang": sum(1 for t in prioritized_tickets if t.get("kategori_prioritas") == "Sedang"),
+            "total_rendah": sum(1 for t in prioritized_tickets if t.get("kategori_prioritas") == "Rendah"),
+            "top_urgent_ticket": prioritized_tickets[0]["nomor_tiket"] if prioritized_tickets else None,
+            "created_at": now_iso
+        }
+        data["ANALISIS_AI"].append(summary_entry)
+
+        # Sinkronkan skor urgensi dan prioritas pada setiap laporan di LAPORAN
+        ticket_map = {t["id_laporan"]: t for t in prioritized_tickets}
+        for rep in data["LAPORAN"]:
+            if rep["id_laporan"] in ticket_map:
+                p_info = ticket_map[rep["id_laporan"]]
+                rep["skor_urgensi"] = p_info["skor_urgensi"]
+                rep["kategori_prioritas"] = p_info["kategori_prioritas"]
+                rep["rank_prioritas"] = p_info["rank"]
+
+        self.save_data(data)
+        return summary_entry
+
 db = JsonDatabase()

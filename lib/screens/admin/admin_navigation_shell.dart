@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'admin_dashboard_screen.dart';
 import 'admin_manage_reports_screen.dart';
 import '../analytics/ai_summary_screen.dart';
+import 'admin_priority_screen.dart';
 
 class AdminNavigationShell extends StatefulWidget {
   final int initialIndex;
@@ -33,7 +34,7 @@ class _AdminNavigationShellState extends State<AdminNavigationShell> {
       AdminDashboardScreen(onNavigateTab: _onNavigate),
       const AdminManageReportsScreen(),
       const AiSummaryScreen(),
-      _buildPlaceholderScreen('Prioritas Penanganan AI', 'Modul 6 (MOD-06) - Engine Scoring & Ranking Prioritas AI'),
+      const AdminPriorityScreen(),
     ];
 
     return Scaffold(
@@ -78,47 +79,6 @@ class _AdminNavigationShellState extends State<AdminNavigationShell> {
               label: 'Prioritas',
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildPlaceholderScreen(String title, String subtitle) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFC),
-      appBar: AppBar(
-        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Color(0xFF0F172A))),
-        backgroundColor: Colors.white,
-        elevation: 0,
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(32.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFEFF6FF),
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(Icons.engineering_outlined, size: 48, color: Color(0xFF1E3A8A)),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                title,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                subtitle,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 13, color: Colors.grey.shade600, height: 1.4),
-              ),
-            ],
-          ),
         ),
       ),
     );

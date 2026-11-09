@@ -107,6 +107,42 @@
       "role": "Mahasiswa",
       "nomor_induk": "29561863",
       "created_at": "2026-11-06T09:21:44.118064+00:00"
+    },
+    {
+      "id_user": "USR-C68735AA",
+      "nama": "Fakhrul Rijal",
+      "email": "fakhrul.071565@kampus.ac.id",
+      "password": "$2b$04$UKLBOMGaIR3J90E0u6RgAe06gm90bKv7lupyQCfhxEW3stO50ezTG",
+      "role": "Mahasiswa",
+      "nomor_induk": "93448264",
+      "created_at": "2026-11-06T10:08:08.021777+00:00"
+    },
+    {
+      "id_user": "USR-F92F8421",
+      "nama": "Andrean Tracking",
+      "email": "andrean.c330d1@kampus.ac.id",
+      "password": "$2b$04$ewwwO25ocrzkmxJbHXZkt.zDb7EjX9Dfsqy6hBboIqRYCx/P1wPLa",
+      "role": "Mahasiswa",
+      "nomor_induk": "90052457",
+      "created_at": "2026-11-06T10:08:16.960796+00:00"
+    },
+    {
+      "id_user": "USR-16E70494",
+      "nama": "Fakhrul Rijal",
+      "email": "fakhrul.9d8ae0@kampus.ac.id",
+      "password": "$2b$04$Nb3gTx9Rrl03uvmw6QjVq.cO4GtE9Sj6iE77BOO7Df5NXS3WugeTS",
+      "role": "Mahasiswa",
+      "nomor_induk": "56871432",
+      "created_at": "2026-11-09T13:50:16.050717+00:00"
+    },
+    {
+      "id_user": "USR-0874514E",
+      "nama": "Andrean Tracking",
+      "email": "andrean.4b4554@kampus.ac.id",
+      "password": "$2b$04$fWxFcLTI9RqYb/qamt74zOS9jOiKH.CuFHjLmytrcmcymFlHWYZ9C",
+      "role": "Mahasiswa",
+      "nomor_induk": "93781994",
+      "created_at": "2026-11-09T13:50:17.558882+00:00"
     }
   ],
   "DETAIL_AKUN": [
@@ -229,6 +265,46 @@
       "foto_profil": "",
       "status_aktif": true,
       "created_at": "2026-11-06T09:21:44.118064+00:00"
+    },
+    {
+      "id_detail": "DET-C0FD1549",
+      "id_user": "USR-C68735AA",
+      "fakultas": "Ilmu Komputer",
+      "prodi": "Informatika",
+      "telepon": "-",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-06T10:08:08.021777+00:00"
+    },
+    {
+      "id_detail": "DET-A0AEFC22",
+      "id_user": "USR-F92F8421",
+      "fakultas": "Fakultas Teknik & Ilmu Komputer",
+      "prodi": "Teknik Informatika",
+      "telepon": "-",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-06T10:08:16.960796+00:00"
+    },
+    {
+      "id_detail": "DET-4031F50B",
+      "id_user": "USR-16E70494",
+      "fakultas": "Ilmu Komputer",
+      "prodi": "Informatika",
+      "telepon": "-",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-09T13:50:16.050717+00:00"
+    },
+    {
+      "id_detail": "DET-98453468",
+      "id_user": "USR-0874514E",
+      "fakultas": "Fakultas Teknik & Ilmu Komputer",
+      "prodi": "Teknik Informatika",
+      "telepon": "-",
+      "foto_profil": "",
+      "status_aktif": true,
+      "created_at": "2026-11-09T13:50:17.558882+00:00"
     }
   ],
   "FASILITAS": [
@@ -292,7 +368,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/e37507407f9042cd9eac389991a5422e.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-05T17:10:37.568061+00:00"
+      "created_at": "2026-11-05T17:10:37.568061+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 47
     },
     {
       "id_laporan": "LAP-A07323B8",
@@ -307,7 +386,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/492b762667994e43b80da3ab03ee0689.jpg",
       "status": "Selesai",
-      "created_at": "2026-11-05T17:18:45.248036+00:00"
+      "created_at": "2026-11-05T17:18:45.248036+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 46
     },
     {
       "id_laporan": "LAP-08A2D354",
@@ -322,7 +404,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/60c1713fb9104d34a15c951be4e2c33f.jpg",
       "status": "Selesai",
-      "created_at": "2026-11-05T17:23:41.531111+00:00"
+      "created_at": "2026-11-05T17:23:41.531111+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 45
     },
     {
       "id_laporan": "LAP-AEB8166C",
@@ -337,7 +422,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/26cb78774ba648e3acf63690d3abe342.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-05T17:25:42.556837+00:00"
+      "created_at": "2026-11-05T17:25:42.556837+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 44
     },
     {
       "id_laporan": "LAP-DAD6355F",
@@ -352,7 +440,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/88c93c5e6c3949a6a4d1de9c398e6014.jpg",
       "status": "Selesai",
-      "created_at": "2026-11-05T17:25:44.124511+00:00"
+      "created_at": "2026-11-05T17:25:44.124511+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 43
     },
     {
       "id_laporan": "LAP-5ECD8903",
@@ -367,7 +458,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/4ab75d30c7ff48bda02be4ef9b9561b5.jpg",
       "status": "Diproses",
-      "created_at": "2026-11-06T08:55:06.396456+00:00"
+      "created_at": "2026-11-06T08:55:06.396456+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 42
     },
     {
       "id_laporan": "LAP-D0A3DA98",
@@ -382,7 +476,10 @@
       "deskripsi": "Remot proyektor baterai habis.",
       "foto_url": "/uploads/402a13ca6b3e46d3a718a756c77d0505.jpg",
       "status": "Ditolak",
-      "created_at": "2026-11-06T08:55:06.487055+00:00"
+      "created_at": "2026-11-06T08:55:06.487055+00:00",
+      "skor_urgensi": 70,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 11
     },
     {
       "id_laporan": "LAP-151B3AF2",
@@ -397,7 +494,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/8446678fc570458484a43defc4aa455d.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:03:56.423841+00:00"
+      "created_at": "2026-11-06T09:03:56.423841+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 41
     },
     {
       "id_laporan": "LAP-E844682C",
@@ -412,7 +512,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/426febd3e1c5487f8c5e93e0a3538f77.jpg",
       "status": "Selesai",
-      "created_at": "2026-11-06T09:03:57.720126+00:00"
+      "created_at": "2026-11-06T09:03:57.720126+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 40
     },
     {
       "id_laporan": "LAP-9EAC7CCE",
@@ -427,7 +530,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/91a4d62989084f948634217efc1c885f.jpg",
       "status": "Diproses",
-      "created_at": "2026-11-06T09:03:58.998607+00:00"
+      "created_at": "2026-11-06T09:03:58.998607+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 39
     },
     {
       "id_laporan": "LAP-5F5140B1",
@@ -442,7 +548,10 @@
       "deskripsi": "Remot proyektor baterai habis.",
       "foto_url": "/uploads/8d9d2869f98a40ac8d1121592e3d8ebe.jpg",
       "status": "Ditolak",
-      "created_at": "2026-11-06T09:03:59.110905+00:00"
+      "created_at": "2026-11-06T09:03:59.110905+00:00",
+      "skor_urgensi": 70,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 10
     },
     {
       "id_laporan": "LAP-78567E35",
@@ -457,7 +566,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-1",
       "foto_url": "/uploads/caea4ef188534f288ab8983b349ec3e7.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:16:19.736342+00:00"
+      "created_at": "2026-11-06T09:16:19.736342+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 38
     },
     {
       "id_laporan": "LAP-85E57F8B",
@@ -472,7 +584,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-2",
       "foto_url": "/uploads/fb90c76856e04cd0b69f485d468e1a72.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:16:19.761354+00:00"
+      "created_at": "2026-11-06T09:16:19.761354+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 37
     },
     {
       "id_laporan": "LAP-633572AD",
@@ -487,7 +602,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-3",
       "foto_url": "/uploads/72b51f5842964a52bde262d765a9cd7b.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:16:19.772636+00:00"
+      "created_at": "2026-11-06T09:16:19.772636+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 36
     },
     {
       "id_laporan": "LAP-35D63723",
@@ -502,7 +620,10 @@
       "deskripsi": "Lampu proyektor mati saat kuliah umum.",
       "foto_url": "/uploads/87b042833b8f4efeade2f2dec9928ced.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:16:19.784819+00:00"
+      "created_at": "2026-11-06T09:16:19.784819+00:00",
+      "skor_urgensi": 98,
+      "kategori_prioritas": "Tinggi",
+      "rank_prioritas": 6
     },
     {
       "id_laporan": "LAP-6E044AD4",
@@ -517,7 +638,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-1",
       "foto_url": "/uploads/1615d4f98a714cbf89f19d3a70ef584d.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:01.177174+00:00"
+      "created_at": "2026-11-06T09:18:01.177174+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 35
     },
     {
       "id_laporan": "LAP-734AC9D6",
@@ -532,7 +656,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-2",
       "foto_url": "/uploads/6c86fc64ee0e479980d39edb998edfba.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:01.218644+00:00"
+      "created_at": "2026-11-06T09:18:01.218644+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 34
     },
     {
       "id_laporan": "LAP-0DB24C09",
@@ -547,7 +674,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-3",
       "foto_url": "/uploads/7240a894aa1d4dd7a106c0f6be3a3d97.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:01.244798+00:00"
+      "created_at": "2026-11-06T09:18:01.244798+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 33
     },
     {
       "id_laporan": "LAP-89D67D8F",
@@ -562,7 +692,10 @@
       "deskripsi": "Lampu proyektor mati saat kuliah umum.",
       "foto_url": "/uploads/cd2976d2def349eba4ec6dad7b167c78.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:01.269203+00:00"
+      "created_at": "2026-11-06T09:18:01.269203+00:00",
+      "skor_urgensi": 98,
+      "kategori_prioritas": "Tinggi",
+      "rank_prioritas": 5
     },
     {
       "id_laporan": "LAP-8EE8339D",
@@ -577,7 +710,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-1",
       "foto_url": "/uploads/29cb5d2674d04be886972f32d9ffe38e.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:30.317200+00:00"
+      "created_at": "2026-11-06T09:18:30.317200+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 32
     },
     {
       "id_laporan": "LAP-5EFA842D",
@@ -592,7 +728,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-2",
       "foto_url": "/uploads/484bf9855e7d4066922d59dd6e5dc71c.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:30.334965+00:00"
+      "created_at": "2026-11-06T09:18:30.334965+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 31
     },
     {
       "id_laporan": "LAP-A599F5E2",
@@ -607,7 +746,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-3",
       "foto_url": "/uploads/6f7d224ddb6141489490f94cce09d2ee.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:30.349918+00:00"
+      "created_at": "2026-11-06T09:18:30.349918+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 30
     },
     {
       "id_laporan": "LAP-A2E0F4D7",
@@ -622,7 +764,10 @@
       "deskripsi": "Lampu proyektor mati saat kuliah umum.",
       "foto_url": "/uploads/372ede40ef4c4b0d8445bc5194b771b1.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:18:30.365711+00:00"
+      "created_at": "2026-11-06T09:18:30.365711+00:00",
+      "skor_urgensi": 98,
+      "kategori_prioritas": "Tinggi",
+      "rank_prioritas": 4
     },
     {
       "id_laporan": "LAP-386D5FA8",
@@ -637,7 +782,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/7f7c11b7f7df4fffb684c4462736b8ef.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:21:42.923854+00:00"
+      "created_at": "2026-11-06T09:21:42.923854+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 29
     },
     {
       "id_laporan": "LAP-6E5B1A8C",
@@ -652,7 +800,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/5ce01cda253b4477b60806ec7f0aec3a.jpg",
       "status": "Selesai",
-      "created_at": "2026-11-06T09:21:44.170370+00:00"
+      "created_at": "2026-11-06T09:21:44.170370+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 28
     },
     {
       "id_laporan": "LAP-88DCE9FC",
@@ -667,7 +818,10 @@
       "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
       "foto_url": "/uploads/40b6a7f6e85a453ebf3f3d14e3e11727.jpg",
       "status": "Diproses",
-      "created_at": "2026-11-06T09:21:45.647720+00:00"
+      "created_at": "2026-11-06T09:21:45.647720+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 27
     },
     {
       "id_laporan": "LAP-EF9A333A",
@@ -682,7 +836,10 @@
       "deskripsi": "Remot proyektor baterai habis.",
       "foto_url": "/uploads/1b3551b997324203bf0cf63cfcd6c921.jpg",
       "status": "Ditolak",
-      "created_at": "2026-11-06T09:21:45.780310+00:00"
+      "created_at": "2026-11-06T09:21:45.780310+00:00",
+      "skor_urgensi": 70,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 9
     },
     {
       "id_laporan": "LAP-0624941F",
@@ -697,7 +854,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-1",
       "foto_url": "/uploads/0f8038b217c247aa8f4ef55879d9afb6.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:21:47.168083+00:00"
+      "created_at": "2026-11-06T09:21:47.168083+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 26
     },
     {
       "id_laporan": "LAP-3CA54860",
@@ -712,7 +872,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-2",
       "foto_url": "/uploads/b95cb3a073e64e0391be1c62e9f9511f.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:21:47.184292+00:00"
+      "created_at": "2026-11-06T09:21:47.184292+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 25
     },
     {
       "id_laporan": "LAP-6DA1FDE3",
@@ -727,7 +890,10 @@
       "deskripsi": "Uji analisis AI laporan kursi ke-3",
       "foto_url": "/uploads/d1feda4ea222443a93e6dee284c86949.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:21:47.200121+00:00"
+      "created_at": "2026-11-06T09:21:47.200121+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 24
     },
     {
       "id_laporan": "LAP-506794BB",
@@ -742,7 +908,298 @@
       "deskripsi": "Lampu proyektor mati saat kuliah umum.",
       "foto_url": "/uploads/4679806aaaf2413fba179534a877f1a5.jpg",
       "status": "Diajukan",
-      "created_at": "2026-11-06T09:21:47.220806+00:00"
+      "created_at": "2026-11-06T09:21:47.220806+00:00",
+      "skor_urgensi": 98,
+      "kategori_prioritas": "Tinggi",
+      "rank_prioritas": 3
+    },
+    {
+      "id_laporan": "LAP-16D36C5F",
+      "nomor_tiket": "#TK-0043",
+      "id_user": "USR-C68735AA",
+      "nama_pelapor": "Fakhrul Rijal",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/5f43aa7f87584a5cba47abfcba198024.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-06T10:08:08.108196+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 23
+    },
+    {
+      "id_laporan": "LAP-372D281A",
+      "nomor_tiket": "#TK-0044",
+      "id_user": "USR-F92F8421",
+      "nama_pelapor": "Andrean Tracking",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/f9fa4407f2194639a53f6d8c7fb35f6f.jpg",
+      "status": "Selesai",
+      "created_at": "2026-11-06T10:08:17.003581+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 22
+    },
+    {
+      "id_laporan": "LAP-E4FDB62B",
+      "nomor_tiket": "#TK-0045",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/890e518c359d4c51b4be3b096a17450a.jpg",
+      "status": "Diproses",
+      "created_at": "2026-11-06T10:08:25.394742+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 21
+    },
+    {
+      "id_laporan": "LAP-8AC30409",
+      "nomor_tiket": "#TK-0046",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang B101 – Gedung B",
+      "kategori": "Proyektor",
+      "tingkat_keparahan": "Ringan",
+      "deskripsi": "Remot proyektor baterai habis.",
+      "foto_url": "/uploads/f0a1de91be5440578f264f3976cabf50.jpg",
+      "status": "Ditolak",
+      "created_at": "2026-11-06T10:08:25.474631+00:00",
+      "skor_urgensi": 70,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 8
+    },
+    {
+      "id_laporan": "LAP-510E2D21",
+      "nomor_tiket": "#TK-0047",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Uji analisis AI laporan kursi ke-1",
+      "foto_url": "/uploads/5af781daaa6742c8a79d8f753752a7fc.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-06T10:08:33.475325+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 20
+    },
+    {
+      "id_laporan": "LAP-CDACD7F6",
+      "nomor_tiket": "#TK-0048",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Uji analisis AI laporan kursi ke-2",
+      "foto_url": "/uploads/a7b4869f65224b498df360574a8a48fc.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-06T10:08:33.496349+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 19
+    },
+    {
+      "id_laporan": "LAP-B6A7706C",
+      "nomor_tiket": "#TK-0049",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Uji analisis AI laporan kursi ke-3",
+      "foto_url": "/uploads/2c39409c70464b4abc048a445547b922.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-06T10:08:33.515512+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 18
+    },
+    {
+      "id_laporan": "LAP-52F27F2A",
+      "nomor_tiket": "#TK-0050",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang B101 – Gedung B",
+      "kategori": "Proyektor",
+      "tingkat_keparahan": "Berat",
+      "deskripsi": "Lampu proyektor mati saat kuliah umum.",
+      "foto_url": "/uploads/d365cd229ae54e0ab7d9885f32a201e0.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-06T10:08:33.551108+00:00",
+      "skor_urgensi": 98,
+      "kategori_prioritas": "Tinggi",
+      "rank_prioritas": 2
+    },
+    {
+      "id_laporan": "LAP-FBB79361",
+      "nomor_tiket": "#TK-0051",
+      "id_user": "USR-16E70494",
+      "nama_pelapor": "Fakhrul Rijal",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/890831584c2f4f8faea9ae66cbf37342.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-09T13:50:16.219219+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 17
+    },
+    {
+      "id_laporan": "LAP-0E789DE9",
+      "nomor_tiket": "#TK-0052",
+      "id_user": "USR-0874514E",
+      "nama_pelapor": "Andrean Tracking",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/5bedba4932074d56ac61a297bc01543a.jpg",
+      "status": "Selesai",
+      "created_at": "2026-11-09T13:50:17.610874+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 16
+    },
+    {
+      "id_laporan": "LAP-B96ABABE",
+      "nomor_tiket": "#TK-0053",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": "FAS-001",
+      "kode_qr": "KR-A002-07",
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Sandaran kursi patah saat dipakai, berbahaya untuk mahasiswa.",
+      "foto_url": "/uploads/645260bb2aec429285ce7e2ee0983c86.jpg",
+      "status": "Diproses",
+      "created_at": "2026-11-09T13:50:19.108706+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 15
+    },
+    {
+      "id_laporan": "LAP-62E633CE",
+      "nomor_tiket": "#TK-0054",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang B101 – Gedung B",
+      "kategori": "Proyektor",
+      "tingkat_keparahan": "Ringan",
+      "deskripsi": "Remot proyektor baterai habis.",
+      "foto_url": "/uploads/bba30f2c098d4e5caeb684f18f3fe97b.jpg",
+      "status": "Ditolak",
+      "created_at": "2026-11-09T13:50:19.290454+00:00",
+      "skor_urgensi": 70,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 7
+    },
+    {
+      "id_laporan": "LAP-F431540D",
+      "nomor_tiket": "#TK-0055",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Uji analisis AI laporan kursi ke-1",
+      "foto_url": "/uploads/de599b3c643f45ed8c3c0260efbd456a.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-09T13:50:20.670548+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 14
+    },
+    {
+      "id_laporan": "LAP-76064805",
+      "nomor_tiket": "#TK-0056",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Uji analisis AI laporan kursi ke-2",
+      "foto_url": "/uploads/dc53cf3725294accad2b6fa13eed9e56.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-09T13:50:20.695013+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 13
+    },
+    {
+      "id_laporan": "LAP-778B3B4D",
+      "nomor_tiket": "#TK-0057",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Kursi",
+      "tingkat_keparahan": "Sedang",
+      "deskripsi": "Uji analisis AI laporan kursi ke-3",
+      "foto_url": "/uploads/8e1a74f3f58a448382ffb39ef10711f2.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-09T13:50:20.726585+00:00",
+      "skor_urgensi": 69,
+      "kategori_prioritas": "Sedang",
+      "rank_prioritas": 12
+    },
+    {
+      "id_laporan": "LAP-2F80DDED",
+      "nomor_tiket": "#TK-0058",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang B101 – Gedung B",
+      "kategori": "Proyektor",
+      "tingkat_keparahan": "Berat",
+      "deskripsi": "Lampu proyektor mati saat kuliah umum.",
+      "foto_url": "/uploads/aebe914fe98d4595954d1d98345c474b.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-09T13:50:20.763498+00:00",
+      "skor_urgensi": 98,
+      "kategori_prioritas": "Tinggi",
+      "rank_prioritas": 1
     }
   ],
   "STATUS_TIKET": [
@@ -1121,6 +1578,198 @@
       "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
       "updated_by": "USR-001",
       "timestamp": "2026-11-06T09:21:47.220806+00:00"
+    },
+    {
+      "id_status": "STS-0048",
+      "id_laporan": "LAP-16D36C5F",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-C68735AA",
+      "timestamp": "2026-11-06T10:08:08.108196+00:00"
+    },
+    {
+      "id_status": "STS-0049",
+      "id_laporan": "LAP-372D281A",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-F92F8421",
+      "timestamp": "2026-11-06T10:08:17.003581+00:00"
+    },
+    {
+      "id_status": "STS-0050",
+      "id_laporan": "LAP-372D281A",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Teknisi Budi",
+      "timestamp": "2026-11-06T10:08:17.067332+00:00"
+    },
+    {
+      "id_status": "STS-0051",
+      "id_laporan": "LAP-372D281A",
+      "status": "Selesai",
+      "catatan": "Perbaikan kursi selesai dilakukan dan sudah layak digunakan kembali.",
+      "updated_by": "Teknisi Budi",
+      "timestamp": "2026-11-06T10:08:17.101174+00:00"
+    },
+    {
+      "id_status": "STS-0052",
+      "id_laporan": "LAP-E4FDB62B",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T10:08:25.394742+00:00"
+    },
+    {
+      "id_status": "STS-0053",
+      "id_laporan": "LAP-E4FDB62B",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T10:08:25.446561+00:00"
+    },
+    {
+      "id_status": "STS-0054",
+      "id_laporan": "LAP-8AC30409",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T10:08:25.474631+00:00"
+    },
+    {
+      "id_status": "STS-0055",
+      "id_laporan": "LAP-8AC30409",
+      "status": "Ditolak",
+      "catatan": "Laporan ditolak: Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T10:08:25.509352+00:00"
+    },
+    {
+      "id_status": "STS-0056",
+      "id_laporan": "LAP-510E2D21",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T10:08:33.475325+00:00"
+    },
+    {
+      "id_status": "STS-0057",
+      "id_laporan": "LAP-CDACD7F6",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T10:08:33.496349+00:00"
+    },
+    {
+      "id_status": "STS-0058",
+      "id_laporan": "LAP-B6A7706C",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T10:08:33.515512+00:00"
+    },
+    {
+      "id_status": "STS-0059",
+      "id_laporan": "LAP-52F27F2A",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-06T10:08:33.551108+00:00"
+    },
+    {
+      "id_status": "STS-0060",
+      "id_laporan": "LAP-FBB79361",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-16E70494",
+      "timestamp": "2026-11-09T13:50:16.219219+00:00"
+    },
+    {
+      "id_status": "STS-0061",
+      "id_laporan": "LAP-0E789DE9",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-0874514E",
+      "timestamp": "2026-11-09T13:50:17.610874+00:00"
+    },
+    {
+      "id_status": "STS-0062",
+      "id_laporan": "LAP-0E789DE9",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Teknisi Budi",
+      "timestamp": "2026-11-09T13:50:17.687627+00:00"
+    },
+    {
+      "id_status": "STS-0063",
+      "id_laporan": "LAP-0E789DE9",
+      "status": "Selesai",
+      "catatan": "Perbaikan kursi selesai dilakukan dan sudah layak digunakan kembali.",
+      "updated_by": "Teknisi Budi",
+      "timestamp": "2026-11-09T13:50:17.731153+00:00"
+    },
+    {
+      "id_status": "STS-0064",
+      "id_laporan": "LAP-B96ABABE",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-09T13:50:19.108706+00:00"
+    },
+    {
+      "id_status": "STS-0065",
+      "id_laporan": "LAP-B96ABABE",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-09T13:50:19.243996+00:00"
+    },
+    {
+      "id_status": "STS-0066",
+      "id_laporan": "LAP-62E633CE",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-09T13:50:19.290454+00:00"
+    },
+    {
+      "id_status": "STS-0067",
+      "id_laporan": "LAP-62E633CE",
+      "status": "Ditolak",
+      "catatan": "Laporan ditolak: Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-09T13:50:19.334450+00:00"
+    },
+    {
+      "id_status": "STS-0068",
+      "id_laporan": "LAP-F431540D",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-09T13:50:20.670548+00:00"
+    },
+    {
+      "id_status": "STS-0069",
+      "id_laporan": "LAP-76064805",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-09T13:50:20.695013+00:00"
+    },
+    {
+      "id_status": "STS-0070",
+      "id_laporan": "LAP-778B3B4D",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-09T13:50:20.726585+00:00"
+    },
+    {
+      "id_status": "STS-0071",
+      "id_laporan": "LAP-2F80DDED",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-09T13:50:20.763498+00:00"
     }
   ],
   "TINDAKAN_PENANGANAN": [
@@ -1195,6 +1844,54 @@
       "diproses_oleh": "USR-002",
       "nama_admin": "Administrator Fasilitas",
       "timestamp": "2026-11-06T09:21:45.827555+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0007",
+      "id_laporan": "LAP-E4FDB62B",
+      "nomor_tiket": "#TK-0045",
+      "status_akhir": "Diproses",
+      "aksi_teknis": "Perbaiki",
+      "alasan_penolakan": null,
+      "catatan_admin": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T10:08:25.446561+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0008",
+      "id_laporan": "LAP-8AC30409",
+      "nomor_tiket": "#TK-0046",
+      "status_akhir": "Ditolak",
+      "aksi_teknis": "Penolakan",
+      "alasan_penolakan": "Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "catatan_admin": null,
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-06T10:08:25.509352+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0009",
+      "id_laporan": "LAP-B96ABABE",
+      "nomor_tiket": "#TK-0053",
+      "status_akhir": "Diproses",
+      "aksi_teknis": "Perbaiki",
+      "alasan_penolakan": null,
+      "catatan_admin": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-09T13:50:19.243996+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0010",
+      "id_laporan": "LAP-62E633CE",
+      "nomor_tiket": "#TK-0054",
+      "status_akhir": "Ditolak",
+      "aksi_teknis": "Penolakan",
+      "alasan_penolakan": "Laporan duplikat — kerusakan yang sama sudah dilaporkan pada tiket #TK-0009.",
+      "catatan_admin": null,
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-09T13:50:19.334450+00:00"
     }
   ],
   "ANALISIS_AI": [
@@ -1347,6 +2044,176 @@
         "tiket_kritis_menunggu": 16
       },
       "created_at": "2026-11-06T09:21:47.295500+00:00"
+    },
+    {
+      "id_analisis": "ANL-86255F88",
+      "tipe_analisis": "Rangkuman Eksekutif AI",
+      "filter_applied": {
+        "periode": "Semua Periode",
+        "gedung": "Semua Gedung",
+        "kategori": "Semua Kategori"
+      },
+      "total_laporan_dianalisis": 39,
+      "bullets": [
+        "Kursi menjadi fasilitas paling sering rusak (30 laporan, 77%).",
+        "Gedung A mencatat 30 laporan, mendominasi area fasilitas bermasalah.",
+        "25 laporan berkeparahan tinggi masih berstatus Diajukan."
+      ],
+      "rekomendasi": "Jadwalkan perbaikan kursi massal dan inspeksi menyeluruh di Gedung A.",
+      "statistik": {
+        "top_kategori": "Kursi",
+        "top_kategori_count": 30,
+        "top_kategori_pct": 77,
+        "top_gedung": "Gedung A",
+        "top_gedung_count": 30,
+        "tiket_kritis_menunggu": 25
+      },
+      "created_at": "2026-11-06T10:08:33.606729+00:00"
+    },
+    {
+      "id_analisis": "ANL-20995C0E",
+      "tipe_analisis": "Rangkuman Eksekutif AI",
+      "filter_applied": {
+        "periode": "Semua Periode",
+        "gedung": "Gedung A",
+        "kategori": "Semua Kategori"
+      },
+      "total_laporan_dianalisis": 30,
+      "bullets": [
+        "Kursi menjadi fasilitas paling sering rusak (30 laporan, 100%).",
+        "Gedung A mencatat 30 laporan, mendominasi area fasilitas bermasalah.",
+        "20 laporan berkeparahan tinggi masih berstatus Diajukan."
+      ],
+      "rekomendasi": "Jadwalkan perbaikan kursi massal dan inspeksi menyeluruh di Gedung A.",
+      "statistik": {
+        "top_kategori": "Kursi",
+        "top_kategori_count": 30,
+        "top_kategori_pct": 100,
+        "top_gedung": "Gedung A",
+        "top_gedung_count": 30,
+        "tiket_kritis_menunggu": 20
+      },
+      "created_at": "2026-11-06T10:08:33.648931+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-723D3992",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 39,
+      "total_tinggi": 5,
+      "total_sedang": 34,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0050",
+      "created_at": "2026-11-09T13:49:06.904624+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-B435E1F7",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 39,
+      "total_tinggi": 5,
+      "total_sedang": 34,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0050",
+      "created_at": "2026-11-09T13:49:06.930257+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-516BAEE3",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 39,
+      "total_tinggi": 5,
+      "total_sedang": 34,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0050",
+      "created_at": "2026-11-09T13:49:06.958641+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-341091B6",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 39,
+      "total_tinggi": 5,
+      "total_sedang": 34,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0050",
+      "created_at": "2026-11-09T13:49:52.200922+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-27FD164C",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 39,
+      "total_tinggi": 5,
+      "total_sedang": 34,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0050",
+      "created_at": "2026-11-09T13:49:52.248745+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-0D207B35",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 39,
+      "total_tinggi": 5,
+      "total_sedang": 34,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0050",
+      "created_at": "2026-11-09T13:49:52.289311+00:00"
+    },
+    {
+      "id_analisis": "ANL-F1AA0476",
+      "tipe_analisis": "Rangkuman Eksekutif AI",
+      "filter_applied": {
+        "periode": "Semua Periode",
+        "gedung": "Semua Gedung",
+        "kategori": "Semua Kategori"
+      },
+      "total_laporan_dianalisis": 47,
+      "bullets": [
+        "Kursi menjadi fasilitas paling sering rusak (36 laporan, 77%).",
+        "Gedung A mencatat 36 laporan, mendominasi area fasilitas bermasalah.",
+        "30 laporan berkeparahan tinggi masih berstatus Diajukan."
+      ],
+      "rekomendasi": "Jadwalkan perbaikan kursi massal dan inspeksi menyeluruh di Gedung A.",
+      "statistik": {
+        "top_kategori": "Kursi",
+        "top_kategori_count": 36,
+        "top_kategori_pct": 77,
+        "top_gedung": "Gedung A",
+        "top_gedung_count": 36,
+        "tiket_kritis_menunggu": 30
+      },
+      "created_at": "2026-11-09T13:50:20.833050+00:00"
+    },
+    {
+      "id_analisis": "ANL-2B83C5AB",
+      "tipe_analisis": "Rangkuman Eksekutif AI",
+      "filter_applied": {
+        "periode": "Semua Periode",
+        "gedung": "Gedung A",
+        "kategori": "Semua Kategori"
+      },
+      "total_laporan_dianalisis": 36,
+      "bullets": [
+        "Kursi menjadi fasilitas paling sering rusak (36 laporan, 100%).",
+        "Gedung A mencatat 36 laporan, mendominasi area fasilitas bermasalah.",
+        "24 laporan berkeparahan tinggi masih berstatus Diajukan."
+      ],
+      "rekomendasi": "Jadwalkan perbaikan kursi massal dan inspeksi menyeluruh di Gedung A.",
+      "statistik": {
+        "top_kategori": "Kursi",
+        "top_kategori_count": 36,
+        "top_kategori_pct": 100,
+        "top_gedung": "Gedung A",
+        "top_gedung_count": 36,
+        "tiket_kritis_menunggu": 24
+      },
+      "created_at": "2026-11-09T13:50:20.883474+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-BDDB1BF6",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 47,
+      "total_tinggi": 6,
+      "total_sedang": 41,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0058",
+      "created_at": "2026-11-09T14:03:25.504417+00:00"
     }
   ]
 }

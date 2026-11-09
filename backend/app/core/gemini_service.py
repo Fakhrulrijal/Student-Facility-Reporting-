@@ -113,4 +113,124 @@ Format respon wajib JSON dengan key:
             }
         }
 
+    def calculate_ticket_priorities(self, reports: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        MOD-06: Mengkalkulasi skor urgensi 0-100 berbasis formula komposit:
+        - Keparahan Laporan (Weight 40%)
+        - Frekuensi Pelaporan Aset/Gedung Sama (Weight 30%)
+        - Dampak Fasilitas terhadap Kegiatan Kampus (Weight 30%)
+        """
+        if not reports:
+            return []
+
+        # Hitung frekuensi per kode QR dan per lokasi
+        qr_counter = Counter(r.get("kode_qr") for r in reports if r.get("kode_qr"))
+        location_counter = Counter(r.get("lokasi", "").strip().lower() for r in reports if r.get("lokasi"))
+        kategori_counter = Counter(r.get("kategori", "").strip().lower() for r in reports if r.get("kategori"))
+
+        prioritized = []
+
+        for r in reports:
+            # 1. Keparahan Laporan (Weight 40%)
+            kep_str = str(r.get("tingkat_keparahan", "Sedang")).strip().lower()
+            if "berat" in kep_str or "tinggi" in kep_str:
+                keparahan_nilai = 100.0
+            elif "sedang" in kep_str:
+                keparahan_nilai = 60.0
+            else: # Ringan / Rendah
+                keparahan_nilai = 30.0
+            keparahan_subskor = round(keparahan_nilai * 0.40, 2)
+
+            # 2. Frekuensi Kerusakan Aset / Gedung (Weight 30%)
+            qr = r.get("kode_qr")
+            lok = r.get("lokasi", "").strip().lower()
+            kat = r.get("kategori", "").strip().lower()
+
+            freq_count = 1
+            if qr and qr in qr_counter:
+                freq_count = max(freq_count, qr_counter[qr])
+            if lok and lok in location_counter:
+                freq_count = max(freq_count, location_counter[lok])
+            if kat and kat in kategori_counter:
+                # Ambil proporsi kategori jika ada konsentrasi kerusakan
+                freq_count = max(freq_count, min(5, kategori_counter[kat]))
+
+            frekuensi_nilai = min(100.0, float(freq_count * 20))
+            frekuensi_subskor = round(frekuensi_nilai * 0.30, 2)
+
+            # 3. Dampak Fasilitas terhadap Kegiatan Kampus (Weight 30%)
+            kat_nama = r.get("kategori", "").lower()
+            lok_nama = r.get("lokasi", "").lower()
+
+            if any(k in kat_nama for k in ["ac", "listrik", "proyektor", "plafon", "laboratorium", "server", "pipa", "atap"]):
+                dampak_nilai = 95.0
+                dampak_keterangan = "Fasilitas vital penunjang langsung kelancaran perkuliahan dan laboratorium."
+            elif any(k in kat_nama for k in ["toilet", "pintu", "jendela", "lampu", "kran", "wastafel", "air"]):
+                dampak_nilai = 75.0
+                dampak_keterangan = "Fasilitas umum penunjang sanitasi, keamanan, dan sirkulasi ruangan."
+            else:
+                dampak_nilai = 50.0
+                dampak_keterangan = "Fasilitas perabot individual/furnitur pendukung kenyamanan ruangan."
+
+            # Bonus dampak jika berada di Lab, Ruang Ujian, atau Ruang Kelas Utama
+            if any(area in lok_nama for area in ["lab", "ujian", "auditorium", "ruang kuliah", "server"]):
+                dampak_nilai = min(100.0, dampak_nilai + 10.0)
+
+            dampak_subskor = round(dampak_nilai * 0.30, 2)
+
+            # Skor Urgensi Komposit (0 - 100)
+            skor_urgensi = int(round(keparahan_subskor + frekuensi_subskor + dampak_subskor))
+            skor_urgensi = max(0, min(100, skor_urgensi))
+
+            # Klasifikasi Kategori Prioritas
+            if skor_urgensi > 80:
+                kategori_prioritas = "Tinggi"
+                rekomendasi_tindakan = "Prioritas Utama: Segera lakukan perbaikan darurat oleh tim teknisi dalam waktu 1x24 jam."
+            elif skor_urgensi >= 50:
+                kategori_prioritas = "Sedang"
+                rekomendasi_tindakan = "Prioritas Standar: Jadwalkan perbaikan reguler dan siapkan suku cadang dalam 2-3 hari kerja."
+            else:
+                kategori_prioritas = "Rendah"
+                rekomendasi_tindakan = "Prioritas Rendah: Masukkan ke jadwal pemeliharaan berkala fasilitas mingguan."
+
+            prioritized.append({
+                "id_laporan": r.get("id_laporan"),
+                "nomor_tiket": r.get("nomor_tiket"),
+                "id_user": r.get("id_user"),
+                "nama_pelapor": r.get("nama_pelapor", "Pelapor"),
+                "nomor_induk_pelapor": r.get("nomor_induk_pelapor") or r.get("nomor_induk") or "12345678",
+                "kategori": r.get("kategori", "Umum"),
+                "lokasi": r.get("lokasi", "Kampus"),
+                "tingkat_keparahan": r.get("tingkat_keparahan", "Sedang"),
+                "status": r.get("status", "Diajukan"),
+                "foto_url": r.get("foto_url", ""),
+                "kode_qr": r.get("kode_qr"),
+                "skor_urgensi": skor_urgensi,
+                "kategori_prioritas": kategori_prioritas,
+                "rekomendasi_tindakan": rekomendasi_tindakan,
+                "breakdown": {
+                    "keparahan_nilai": keparahan_nilai,
+                    "keparahan_bobot": 0.40,
+                    "keparahan_subskor": keparahan_subskor,
+                    "frekuensi_nilai": frekuensi_nilai,
+                    "frekuensi_bobot": 0.30,
+                    "frekuensi_subskor": frekuensi_subskor,
+                    "frekuensi_count": freq_count,
+                    "dampak_nilai": dampak_nilai,
+                    "dampak_bobot": 0.30,
+                    "dampak_subskor": dampak_subskor,
+                    "dampak_keterangan": dampak_keterangan
+                },
+                "created_at": r.get("created_at", "")
+            })
+
+        # Urutkan berdasarkan skor urgensi tertinggi, lalu created_at terbaru
+        prioritized.sort(key=lambda x: (x["skor_urgensi"], x["created_at"]), reverse=True)
+
+        # Sematkan Rank #1, #2, dst.
+        for idx, item in enumerate(prioritized):
+            item["rank"] = idx + 1
+
+        return prioritized
+
 gemini_analytics = GeminiAnalyticsService()
