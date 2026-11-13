@@ -23,6 +23,24 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
     });
   }
 
+  void _navigateToReports(BuildContext context, {required String tab, String category = 'Semua'}) {
+    final adminProv = Provider.of<AdminProvider>(context, listen: false);
+    adminProv.setSelectedTab(tab);
+    adminProv.setSelectedCategory(category);
+    adminProv.fetchReports();
+
+    if (widget.onNavigateTab != null) {
+      widget.onNavigateTab!(1);
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => AdminManageReportsScreen(initialTab: tab, initialCategory: category),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final adminProv = context.watch<AdminProvider>();
@@ -80,7 +98,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Summary Metrics Row (Slide 18 Mockup)
+              // Summary Metrics Row (Slide 18 Mockup - Clickable Filter)
               Row(
                 children: [
                   Expanded(
@@ -90,6 +108,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
                       bgColor: const Color(0xFFEFF6FF),
                       textColor: const Color(0xFF1D4ED8),
                       borderColor: const Color(0xFFBFDBFE),
+                      onTap: () => _navigateToReports(context, tab: 'Diproses'),
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -100,6 +119,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
                       bgColor: const Color(0xFFF0FDF4),
                       textColor: const Color(0xFF15803D),
                       borderColor: const Color(0xFFBBF7D0),
+                      onTap: () => _navigateToReports(context, tab: 'Selesai'),
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -110,13 +130,14 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
                       bgColor: const Color(0xFF1E3A8A),
                       textColor: Colors.white,
                       borderColor: const Color(0xFF1E3A8A),
+                      onTap: () => _navigateToReports(context, tab: 'Semua'),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 24),
 
-              // Breakdown Kategori Kerusakan (Slide 18 Mockup)
+              // Breakdown Kategori Kerusakan (Slide 18 Mockup - Clickable Category Filter)
               const Text(
                 'Kategori Kerusakan',
                 style: TextStyle(
@@ -135,13 +156,37 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
                 ),
                 child: Column(
                   children: [
-                    _buildCategoryRow('Kursi', breakdown['Kursi'] ?? 12, Icons.chair_outlined, Colors.blue),
+                    _buildCategoryRow(
+                      'Kursi',
+                      breakdown['Kursi'] ?? 12,
+                      Icons.chair_outlined,
+                      Colors.blue,
+                      () => _navigateToReports(context, tab: 'Semua', category: 'Kursi'),
+                    ),
                     const Divider(height: 18),
-                    _buildCategoryRow('Proyektor', breakdown['Proyektor'] ?? 7, Icons.videocam_outlined, Colors.purple),
+                    _buildCategoryRow(
+                      'Proyektor',
+                      breakdown['Proyektor'] ?? 7,
+                      Icons.videocam_outlined,
+                      Colors.purple,
+                      () => _navigateToReports(context, tab: 'Semua', category: 'Proyektor'),
+                    ),
                     const Divider(height: 18),
-                    _buildCategoryRow('Lampu / AC', breakdown['Lampu / AC'] ?? 6, Icons.lightbulb_outline, Colors.amber.shade800),
+                    _buildCategoryRow(
+                      'Lampu / AC',
+                      breakdown['Lampu / AC'] ?? 6,
+                      Icons.lightbulb_outline,
+                      Colors.amber.shade800,
+                      () => _navigateToReports(context, tab: 'Semua', category: 'Lampu / AC'),
+                    ),
                     const Divider(height: 18),
-                    _buildCategoryRow('DLL', breakdown['DLL'] ?? 9, Icons.category_outlined, Colors.teal),
+                    _buildCategoryRow(
+                      'DLL',
+                      breakdown['DLL'] ?? 9,
+                      Icons.category_outlined,
+                      Colors.teal,
+                      () => _navigateToReports(context, tab: 'Semua', category: 'DLL'),
+                    ),
                   ],
                 ),
               ),
@@ -201,83 +246,120 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
     required Color bgColor,
     required Color textColor,
     required Color borderColor,
+    VoidCallback? onTap,
   }) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 12),
-      decoration: BoxDecoration(
-        color: bgColor,
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: borderColor),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.02),
-            blurRadius: 4,
-            offset: const Offset(0, 2),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 8),
+          decoration: BoxDecoration(
+            color: bgColor,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: borderColor),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.03),
+                blurRadius: 4,
+                offset: const Offset(0, 2),
+              ),
+            ],
           ),
-        ],
-      ),
-      child: Column(
-        children: [
-          Text(
-            value,
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
-              color: textColor,
-            ),
+          child: Column(
+            children: [
+              Text(
+                value,
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: textColor,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: textColor.withValues(alpha: 0.9),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    size: 11,
+                    color: textColor.withValues(alpha: 0.7),
+                  ),
+                ],
+              ),
+            ],
           ),
-          const SizedBox(height: 4),
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              color: textColor.withOpacity(0.9),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
 
-  Widget _buildCategoryRow(String name, int count, IconData icon, Color color) {
-    return Row(
-      children: [
-        Container(
-          padding: const EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(8),
+  Widget _buildCategoryRow(String name, int count, IconData icon, Color color, VoidCallback? onTap) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(8),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: color.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Icon(icon, color: color, size: 20),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Text(
+                  name,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF1E293B),
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF1F5F9),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      count.toString(),
+                      style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF334155),
+                      ),
+                    ),
+                    const SizedBox(width: 4),
+                    const Icon(Icons.chevron_right_rounded, size: 14, color: Color(0xFF94A3B8)),
+                  ],
+                ),
+              ),
+            ],
           ),
-          child: Icon(icon, color: color, size: 20),
         ),
-        const SizedBox(width: 14),
-        Expanded(
-          child: Text(
-            name,
-            style: const TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
-              color: Color(0xFF1E293B),
-            ),
-          ),
-        ),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-          decoration: BoxDecoration(
-            color: const Color(0xFFF1F5F9),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Text(
-            count.toString(),
-            style: const TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.bold,
-              color: Color(0xFF334155),
-            ),
-          ),
-        ),
-      ],
+      ),
     );
   }
 

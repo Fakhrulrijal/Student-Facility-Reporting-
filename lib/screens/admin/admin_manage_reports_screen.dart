@@ -5,7 +5,10 @@ import '../../widgets/status_badge.dart';
 import 'admin_report_detail_screen.dart';
 
 class AdminManageReportsScreen extends StatefulWidget {
-  const AdminManageReportsScreen({Key? key}) : super(key: key);
+  final String? initialTab;
+  final String? initialCategory;
+
+  const AdminManageReportsScreen({Key? key, this.initialTab, this.initialCategory}) : super(key: key);
 
   @override
   State<AdminManageReportsScreen> createState() => _AdminManageReportsScreenState();
@@ -18,7 +21,14 @@ class _AdminManageReportsScreenState extends State<AdminManageReportsScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Provider.of<AdminProvider>(context, listen: false).fetchReports();
+      final prov = Provider.of<AdminProvider>(context, listen: false);
+      if (widget.initialTab != null) {
+        prov.setSelectedTab(widget.initialTab!);
+      }
+      if (widget.initialCategory != null) {
+        prov.setSelectedCategory(widget.initialCategory!);
+      }
+      prov.fetchReports();
     });
   }
 
@@ -85,7 +95,7 @@ class _AdminManageReportsScreenState extends State<AdminManageReportsScreen> {
                           boxShadow: isSelected
                               ? [
                                   BoxShadow(
-                                    color: Colors.black.withOpacity(0.06),
+                                    color: Colors.black.withValues(alpha: 0.06),
                                     blurRadius: 4,
                                     offset: const Offset(0, 2),
                                   )
@@ -130,6 +140,55 @@ class _AdminManageReportsScreenState extends State<AdminManageReportsScreen> {
               ],
             ),
           ),
+
+          // Active Category Filter Chip (Jika difilter dari Kategori Dashboard)
+          if (adminProv.selectedCategory != 'Semua')
+            Container(
+              color: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFEFF6FF),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: const Color(0xFFBFDBFE)),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Kategori: ${adminProv.selectedCategory}',
+                          style: const TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF1E3A8A),
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        GestureDetector(
+                          onTap: () => adminProv.clearCategoryFilter(),
+                          child: const Icon(Icons.close, size: 14, color: Color(0xFF1E3A8A)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () => adminProv.clearCategoryFilter(),
+                    child: const Text(
+                      'Hapus Filter Kategori',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color(0xFF2563EB),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           const Divider(height: 1, color: Color(0xFFE2E8F0)),
 
           // List Laporan Aktif

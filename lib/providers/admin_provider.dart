@@ -11,6 +11,7 @@ class AdminProvider with ChangeNotifier {
   int _totalLaporan = 0;
   int _menungguPeninjauan = 0;
   String _selectedTab = 'Semua';
+  String _selectedCategory = 'Semua';
 
   bool _isLoading = false;
   bool _isUpdating = false;
@@ -25,6 +26,7 @@ class AdminProvider with ChangeNotifier {
   int get totalLaporan => _totalLaporan;
   int get menungguPeninjauan => _menungguPeninjauan;
   String get selectedTab => _selectedTab;
+  String get selectedCategory => _selectedCategory;
   bool get isLoading => _isLoading;
   bool get isUpdating => _isUpdating;
   String? get error => _error;
@@ -32,12 +34,35 @@ class AdminProvider with ChangeNotifier {
   AdminUpdateStatusResult? get lastUpdatedResult => _lastUpdatedResult;
 
   List<ReportModel> get filteredReports {
-    if (_selectedTab == 'Semua') return _adminReports;
-    return _adminReports.where((r) => r.status.toLowerCase() == _selectedTab.toLowerCase()).toList();
+    var list = _adminReports;
+    if (_selectedTab != 'Semua') {
+      list = list.where((r) => r.status.toLowerCase() == _selectedTab.toLowerCase()).toList();
+    }
+    if (_selectedCategory != 'Semua') {
+      if (_selectedCategory == 'Lampu / AC') {
+        list = list.where((r) => r.kategori.toLowerCase().contains('lampu') || r.kategori.toLowerCase().contains('ac')).toList();
+      } else if (_selectedCategory == 'DLL') {
+        final mainKats = ['kursi', 'proyektor', 'lampu', 'ac'];
+        list = list.where((r) => !mainKats.any((k) => r.kategori.toLowerCase().contains(k))).toList();
+      } else {
+        list = list.where((r) => r.kategori.toLowerCase() == _selectedCategory.toLowerCase()).toList();
+      }
+    }
+    return list;
   }
 
   void setSelectedTab(String tab) {
     _selectedTab = tab;
+    notifyListeners();
+  }
+
+  void setSelectedCategory(String category) {
+    _selectedCategory = category;
+    notifyListeners();
+  }
+
+  void clearCategoryFilter() {
+    _selectedCategory = 'Semua';
     notifyListeners();
   }
 
