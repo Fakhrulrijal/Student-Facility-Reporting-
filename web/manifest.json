@@ -1,11 +1,11 @@
 {
-    "name": "student_facility_reporting",
-    "short_name": "student_facility_reporting",
+    "name": "Pelaporan Fasilitas Kampus",
+    "short_name": "Fasilitas Kampus",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#F8FAFC",
+    "theme_color": "#1E3A8A",
+    "description": "Aplikasi Pelaporan Fasilitas Kampus Berbasis AI & Mobile",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
