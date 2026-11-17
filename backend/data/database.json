@@ -143,6 +143,15 @@
       "role": "Mahasiswa",
       "nomor_induk": "93781994",
       "created_at": "2026-11-09T13:50:17.558882+00:00"
+    },
+    {
+      "id_user": "USR-0048",
+      "nama": "Mahasiswa Fasilitas",
+      "email": "mahasiswa@kampus.ac.id",
+      "password": "$2b$04$x1OgW6x.prkPBqYHJGgAves7G.mMZ.41tBlLOisy9gPYP1ZwamEeG",
+      "role": "Mahasiswa",
+      "nomor_induk": "2024010048",
+      "created_at": "2026-11-17T11:00:00.000000+00:00"
     }
   ],
   "DETAIL_AKUN": [
@@ -2380,6 +2389,41 @@
         "tiket_kritis_menunggu": 30
       },
       "created_at": "2026-11-16T14:52:54.594463+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-86FD3BB4",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 48,
+      "total_tinggi": 6,
+      "total_sedang": 42,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0058",
+      "created_at": "2026-11-17T03:58:51.320772+00:00"
+    },
+    {
+      "id_analisis": "ANL-9407DBF1",
+      "tipe_analisis": "Rangkuman Eksekutif AI",
+      "filter_applied": {
+        "periode": "Semua Periode",
+        "gedung": "Semua Gedung",
+        "kategori": "Semua Kategori"
+      },
+      "total_laporan_dianalisis": 48,
+      "bullets": [
+        "Kursi menjadi fasilitas paling sering rusak (37 laporan, 77%).",
+        "Gedung A mencatat 37 laporan, mendominasi area fasilitas bermasalah.",
+        "30 laporan berkeparahan tinggi masih berstatus Diajukan."
+      ],
+      "rekomendasi": "Jadwalkan perbaikan kursi massal dan inspeksi menyeluruh di Gedung A.",
+      "statistik": {
+        "top_kategori": "Kursi",
+        "top_kategori_count": 37,
+        "top_kategori_pct": 77,
+        "top_gedung": "Gedung A",
+        "top_gedung_count": 37,
+        "tiket_kritis_menunggu": 30
+      },
+      "created_at": "2026-11-17T04:00:14.756567+00:00"
     }
   ]
 }
