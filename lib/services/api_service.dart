@@ -5,7 +5,8 @@ class ApiService {
   // Secara otomatis memilih host yang tepat sesuai platform eksekusi
   static String get baseUrl {
     if (kIsWeb) {
-      return 'http://127.0.0.1:8000';
+      final host = Uri.base.host.isNotEmpty ? Uri.base.host : '127.0.0.1';
+      return 'http://$host:8000';
     }
     try {
       if (Platform.isAndroid) {
