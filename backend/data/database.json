@@ -380,7 +380,7 @@
       "created_at": "2026-11-05T17:10:37.568061+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 49
+      "rank_prioritas": 50
     },
     {
       "id_laporan": "LAP-A07323B8",
@@ -398,7 +398,7 @@
       "created_at": "2026-11-05T17:18:45.248036+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 48
+      "rank_prioritas": 49
     },
     {
       "id_laporan": "LAP-08A2D354",
@@ -416,7 +416,7 @@
       "created_at": "2026-11-05T17:23:41.531111+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 47
+      "rank_prioritas": 48
     },
     {
       "id_laporan": "LAP-AEB8166C",
@@ -434,7 +434,7 @@
       "created_at": "2026-11-05T17:25:42.556837+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 46
+      "rank_prioritas": 47
     },
     {
       "id_laporan": "LAP-DAD6355F",
@@ -452,7 +452,7 @@
       "created_at": "2026-11-05T17:25:44.124511+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 45
+      "rank_prioritas": 46
     },
     {
       "id_laporan": "LAP-5ECD8903",
@@ -470,7 +470,7 @@
       "created_at": "2026-11-06T08:55:06.396456+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 44
+      "rank_prioritas": 45
     },
     {
       "id_laporan": "LAP-D0A3DA98",
@@ -488,7 +488,7 @@
       "created_at": "2026-11-06T08:55:06.487055+00:00",
       "skor_urgensi": 70,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 11
+      "rank_prioritas": 12
     },
     {
       "id_laporan": "LAP-151B3AF2",
@@ -506,7 +506,7 @@
       "created_at": "2026-11-06T09:03:56.423841+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 43
+      "rank_prioritas": 44
     },
     {
       "id_laporan": "LAP-E844682C",
@@ -524,7 +524,7 @@
       "created_at": "2026-11-06T09:03:57.720126+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 42
+      "rank_prioritas": 43
     },
     {
       "id_laporan": "LAP-9EAC7CCE",
@@ -542,7 +542,7 @@
       "created_at": "2026-11-06T09:03:58.998607+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 41
+      "rank_prioritas": 42
     },
     {
       "id_laporan": "LAP-5F5140B1",
@@ -560,7 +560,7 @@
       "created_at": "2026-11-06T09:03:59.110905+00:00",
       "skor_urgensi": 70,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 10
+      "rank_prioritas": 11
     },
     {
       "id_laporan": "LAP-78567E35",
@@ -578,7 +578,7 @@
       "created_at": "2026-11-06T09:16:19.736342+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 40
+      "rank_prioritas": 41
     },
     {
       "id_laporan": "LAP-85E57F8B",
@@ -596,7 +596,7 @@
       "created_at": "2026-11-06T09:16:19.761354+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 39
+      "rank_prioritas": 40
     },
     {
       "id_laporan": "LAP-633572AD",
@@ -614,7 +614,7 @@
       "created_at": "2026-11-06T09:16:19.772636+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 38
+      "rank_prioritas": 39
     },
     {
       "id_laporan": "LAP-35D63723",
@@ -650,7 +650,7 @@
       "created_at": "2026-11-06T09:18:01.177174+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 37
+      "rank_prioritas": 38
     },
     {
       "id_laporan": "LAP-734AC9D6",
@@ -668,7 +668,7 @@
       "created_at": "2026-11-06T09:18:01.218644+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 36
+      "rank_prioritas": 37
     },
     {
       "id_laporan": "LAP-0DB24C09",
@@ -686,7 +686,7 @@
       "created_at": "2026-11-06T09:18:01.244798+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 35
+      "rank_prioritas": 36
     },
     {
       "id_laporan": "LAP-89D67D8F",
@@ -722,7 +722,7 @@
       "created_at": "2026-11-06T09:18:30.317200+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 34
+      "rank_prioritas": 35
     },
     {
       "id_laporan": "LAP-5EFA842D",
@@ -740,7 +740,7 @@
       "created_at": "2026-11-06T09:18:30.334965+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 33
+      "rank_prioritas": 34
     },
     {
       "id_laporan": "LAP-A599F5E2",
@@ -758,7 +758,7 @@
       "created_at": "2026-11-06T09:18:30.349918+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 32
+      "rank_prioritas": 33
     },
     {
       "id_laporan": "LAP-A2E0F4D7",
@@ -794,7 +794,7 @@
       "created_at": "2026-11-06T09:21:42.923854+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 31
+      "rank_prioritas": 32
     },
     {
       "id_laporan": "LAP-6E5B1A8C",
@@ -812,7 +812,7 @@
       "created_at": "2026-11-06T09:21:44.170370+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 30
+      "rank_prioritas": 31
     },
     {
       "id_laporan": "LAP-88DCE9FC",
@@ -830,7 +830,7 @@
       "created_at": "2026-11-06T09:21:45.647720+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 29
+      "rank_prioritas": 30
     },
     {
       "id_laporan": "LAP-EF9A333A",
@@ -848,7 +848,7 @@
       "created_at": "2026-11-06T09:21:45.780310+00:00",
       "skor_urgensi": 70,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 9
+      "rank_prioritas": 10
     },
     {
       "id_laporan": "LAP-0624941F",
@@ -866,7 +866,7 @@
       "created_at": "2026-11-06T09:21:47.168083+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 28
+      "rank_prioritas": 29
     },
     {
       "id_laporan": "LAP-3CA54860",
@@ -884,7 +884,7 @@
       "created_at": "2026-11-06T09:21:47.184292+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 27
+      "rank_prioritas": 28
     },
     {
       "id_laporan": "LAP-6DA1FDE3",
@@ -902,7 +902,7 @@
       "created_at": "2026-11-06T09:21:47.200121+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 26
+      "rank_prioritas": 27
     },
     {
       "id_laporan": "LAP-506794BB",
@@ -938,7 +938,7 @@
       "created_at": "2026-11-06T10:08:08.108196+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 25
+      "rank_prioritas": 26
     },
     {
       "id_laporan": "LAP-372D281A",
@@ -956,7 +956,7 @@
       "created_at": "2026-11-06T10:08:17.003581+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 24
+      "rank_prioritas": 25
     },
     {
       "id_laporan": "LAP-E4FDB62B",
@@ -974,7 +974,7 @@
       "created_at": "2026-11-06T10:08:25.394742+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 23
+      "rank_prioritas": 24
     },
     {
       "id_laporan": "LAP-8AC30409",
@@ -992,7 +992,7 @@
       "created_at": "2026-11-06T10:08:25.474631+00:00",
       "skor_urgensi": 70,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 8
+      "rank_prioritas": 9
     },
     {
       "id_laporan": "LAP-510E2D21",
@@ -1010,7 +1010,7 @@
       "created_at": "2026-11-06T10:08:33.475325+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 22
+      "rank_prioritas": 23
     },
     {
       "id_laporan": "LAP-CDACD7F6",
@@ -1028,7 +1028,7 @@
       "created_at": "2026-11-06T10:08:33.496349+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 21
+      "rank_prioritas": 22
     },
     {
       "id_laporan": "LAP-B6A7706C",
@@ -1046,7 +1046,7 @@
       "created_at": "2026-11-06T10:08:33.515512+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 20
+      "rank_prioritas": 21
     },
     {
       "id_laporan": "LAP-52F27F2A",
@@ -1082,7 +1082,7 @@
       "created_at": "2026-11-09T13:50:16.219219+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 19
+      "rank_prioritas": 20
     },
     {
       "id_laporan": "LAP-0E789DE9",
@@ -1100,7 +1100,7 @@
       "created_at": "2026-11-09T13:50:17.610874+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 18
+      "rank_prioritas": 19
     },
     {
       "id_laporan": "LAP-B96ABABE",
@@ -1118,7 +1118,7 @@
       "created_at": "2026-11-09T13:50:19.108706+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 17
+      "rank_prioritas": 18
     },
     {
       "id_laporan": "LAP-62E633CE",
@@ -1136,7 +1136,7 @@
       "created_at": "2026-11-09T13:50:19.290454+00:00",
       "skor_urgensi": 70,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 7
+      "rank_prioritas": 8
     },
     {
       "id_laporan": "LAP-F431540D",
@@ -1154,7 +1154,7 @@
       "created_at": "2026-11-09T13:50:20.670548+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 16
+      "rank_prioritas": 17
     },
     {
       "id_laporan": "LAP-76064805",
@@ -1172,7 +1172,7 @@
       "created_at": "2026-11-09T13:50:20.695013+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 15
+      "rank_prioritas": 16
     },
     {
       "id_laporan": "LAP-778B3B4D",
@@ -1190,7 +1190,7 @@
       "created_at": "2026-11-09T13:50:20.726585+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 14
+      "rank_prioritas": 15
     },
     {
       "id_laporan": "LAP-2F80DDED",
@@ -1204,7 +1204,7 @@
       "tingkat_keparahan": "Berat",
       "deskripsi": "Lampu proyektor mati saat kuliah umum.",
       "foto_url": "/uploads/aebe914fe98d4595954d1d98345c474b.jpg",
-      "status": "Diajukan",
+      "status": "Diproses",
       "created_at": "2026-11-09T13:50:20.763498+00:00",
       "skor_urgensi": 98,
       "kategori_prioritas": "Tinggi",
@@ -1226,7 +1226,7 @@
       "created_at": "2026-11-13T13:29:50.345981+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 13
+      "rank_prioritas": 14
     },
     {
       "id_laporan": "LAP-2F35C3FD",
@@ -1244,7 +1244,25 @@
       "created_at": "2026-11-17T08:44:33.250927+00:00",
       "skor_urgensi": 69,
       "kategori_prioritas": "Sedang",
-      "rank_prioritas": 12
+      "rank_prioritas": 13
+    },
+    {
+      "id_laporan": "LAP-86F0DD83",
+      "nomor_tiket": "#TK-0061",
+      "id_user": "USR-001",
+      "nama_pelapor": "Andrean",
+      "id_fasilitas": null,
+      "kode_qr": null,
+      "lokasi": "Ruang A002 – Gedung A",
+      "kategori": "Meja",
+      "tingkat_keparahan": "Berat",
+      "deskripsi": "𝙥𝙖𝙩𝙖𝙝 𝙩𝙞𝙙𝙖𝙠 𝙗𝙞𝙨𝙖 𝙙𝙞 𝙜𝙪𝙗𝙖𝙠𝙖𝙣",
+      "foto_url": "/uploads/09e91950cd1a43d3a720b40462807d2c.jpg",
+      "status": "Diajukan",
+      "created_at": "2026-11-22T16:26:40.906191+00:00",
+      "skor_urgensi": 85,
+      "kategori_prioritas": "Tinggi",
+      "rank_prioritas": 7
     }
   ],
   "STATUS_TIKET": [
@@ -1839,6 +1857,22 @@
       "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
       "updated_by": "USR-001",
       "timestamp": "2026-11-17T08:44:33.250927+00:00"
+    },
+    {
+      "id_status": "STS-0075",
+      "id_laporan": "LAP-86F0DD83",
+      "status": "Diajukan",
+      "catatan": "Laporan berhasil diajukan ke sistem fasilitas kampus.",
+      "updated_by": "USR-001",
+      "timestamp": "2026-11-22T16:26:40.906191+00:00"
+    },
+    {
+      "id_status": "STS-0076",
+      "id_laporan": "LAP-2F80DDED",
+      "status": "Diproses",
+      "catatan": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "updated_by": "Administrator Fasilitas",
+      "timestamp": "2026-11-22T16:27:32.262287+00:00"
     }
   ],
   "TINDAKAN_PENANGANAN": [
@@ -1973,6 +2007,18 @@
       "diproses_oleh": "USR-002",
       "nama_admin": "Administrator Fasilitas",
       "timestamp": "2026-11-13T13:41:04.990468+00:00"
+    },
+    {
+      "id_tindakan": "TDK-0012",
+      "id_laporan": "LAP-2F80DDED",
+      "nomor_tiket": "#TK-0058",
+      "status_akhir": "Diproses",
+      "aksi_teknis": "Perbaiki",
+      "alasan_penolakan": null,
+      "catatan_admin": "Sandaran akan diperbaiki teknisi pada hari Senin.",
+      "diproses_oleh": "USR-002",
+      "nama_admin": "Administrator Fasilitas",
+      "timestamp": "2026-11-22T16:27:32.262287+00:00"
     }
   ],
   "ANALISIS_AI": [
@@ -2470,6 +2516,26 @@
       "total_rendah": 0,
       "top_urgent_ticket": "#TK-0058",
       "created_at": "2026-11-20T11:39:23.225654+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-04E21A62",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 50,
+      "total_tinggi": 7,
+      "total_sedang": 43,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0058",
+      "created_at": "2026-11-22T16:27:13.800135+00:00"
+    },
+    {
+      "id_analisis": "ANL-PRIO-0EFA00AA",
+      "jenis": "PRIORITAS_SKOR",
+      "total_tiket_dievaluasi": 50,
+      "total_tinggi": 7,
+      "total_sedang": 43,
+      "total_rendah": 0,
+      "top_urgent_ticket": "#TK-0058",
+      "created_at": "2026-11-22T16:27:34.300431+00:00"
     }
   ]
 }
