@@ -6,9 +6,11 @@ import 'providers/admin_provider.dart';
 import 'providers/analytics_provider.dart';
 import 'providers/priority_provider.dart';
 import 'screens/auth/login_screen.dart';
+import 'services/api_service.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await ApiService.init();
   runApp(const StudentFacilityReportingApp());
 }
 

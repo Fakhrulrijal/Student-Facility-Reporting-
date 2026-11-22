@@ -1,5 +1,4 @@
 import http.server
-import socketserver
 import os
 
 PORT = 3000
@@ -21,7 +20,7 @@ class SPANetworkHandler(http.server.SimpleHTTPRequestHandler):
         req_path = self.path.split("?")[0].split("#")[0]
         local_path = os.path.join(WEB_DIR, req_path.lstrip("/"))
         
-        # If requested file doesn't exist and not an asset/wasm/js/json request, serve index.html for Flutter SPA
+        # If requested file doesn't exist and not a direct static asset, serve index.html for Flutter SPA
         if not os.path.exists(local_path) and not any(req_path.endswith(ext) for ext in [".js", ".wasm", ".json", ".png", ".jpg", ".ttf", ".otf", ".css"]):
             self.path = "/index.html"
             
@@ -34,8 +33,8 @@ if __name__ == "__main__":
         ".json": "application/json",
     })
     
-    # Allow address reuse
-    socketserver.TCPServer.allow_reuse_address = True
-    with socketserver.TCPServer(("0.0.0.0", PORT), SPANetworkHandler) as httpd:
-        print(f"Flutter Web Server ready on port {PORT} serving {WEB_DIR}")
-        httpd.serve_forever()
+    # Use ThreadingHTTPServer for concurrent, multi-threaded requests (essential for iOS & Chrome)
+    server = http.server.ThreadingHTTPServer(("0.0.0.0", PORT), SPANetworkHandler)
+    server.daemon_threads = True
+    print(f"Flutter Multi-Threaded Web Server ready on port {PORT} serving {WEB_DIR}")
+    server.serve_forever()

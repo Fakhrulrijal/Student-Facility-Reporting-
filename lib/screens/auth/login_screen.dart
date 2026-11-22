@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../widgets/custom_text_field.dart';
 import '../../widgets/error_dialog.dart';
+import '../../services/api_service.dart';
 import '../home/main_navigation_shell.dart';
 import '../admin/admin_navigation_shell.dart';
 import 'register_screen.dart';
@@ -89,6 +90,76 @@ class _LoginScreenState extends State<LoginScreen> {
     _validateAndLogin();
   }
 
+  void _showServerConfigDialog() {
+    final controller = TextEditingController(text: ApiService.customHost);
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Row(
+          children: [
+            Icon(Icons.wifi_tethering, color: Color(0xFF1E3A8A)),
+            SizedBox(width: 8),
+            Text('Pengaturan IP Server', style: TextStyle(fontSize: 18)),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Masukkan IP laptop server di jaringan Wi-Fi saat ini:',
+              style: TextStyle(fontSize: 13),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: controller,
+              decoration: const InputDecoration(
+                labelText: 'IP Host Laptop',
+                hintText: 'Contoh: 192.168.1.8',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.laptop),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Port backend: :8000',
+              style: TextStyle(fontSize: 11, color: Colors.grey),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Batal'),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF1E3A8A),
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () async {
+              final newIp = controller.text.trim();
+              if (newIp.isNotEmpty) {
+                await ApiService.setHost(newIp);
+                if (mounted) {
+                  Navigator.pop(ctx);
+                  setState(() {});
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('IP Server tersimpan: ${ApiService.customHost}'),
+                      backgroundColor: const Color(0xFF16A34A),
+                    ),
+                  );
+                }
+              }
+            },
+            child: const Text('Simpan'),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final auth = context.watch<AuthProvider>();
@@ -103,6 +174,20 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                // Server IP Indicator / Configurator
+                Align(
+                  alignment: Alignment.topRight,
+                  child: ActionChip(
+                    avatar: const Icon(Icons.wifi, size: 14, color: Color(0xFF1E3A8A)),
+                    label: Text(
+                      'Server: ${ApiService.customHost}',
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF1E3A8A)),
+                    ),
+                    onPressed: _showServerConfigDialog,
+                  ),
+                ),
+                const SizedBox(height: 8),
+
                 // Header Logo & Branding
                 Center(
                   child: Container(
