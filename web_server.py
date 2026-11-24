@@ -21,7 +21,7 @@ class SPANetworkHandler(http.server.SimpleHTTPRequestHandler):
         local_path = os.path.join(WEB_DIR, req_path.lstrip("/"))
         
         # If requested file doesn't exist and not a direct static asset, serve index.html for Flutter SPA
-        if not os.path.exists(local_path) and not any(req_path.endswith(ext) for ext in [".js", ".wasm", ".json", ".png", ".jpg", ".ttf", ".otf", ".css"]):
+        if not os.path.exists(local_path) and not any(req_path.endswith(ext) for ext in [".js", ".wasm", ".json", ".png", ".jpg", ".ttf", ".otf", ".css", ".apk", ".docx"]):
             self.path = "/index.html"
             
         return super().do_GET()
@@ -31,6 +31,8 @@ if __name__ == "__main__":
         ".wasm": "application/wasm",
         ".js": "application/javascript",
         ".json": "application/json",
+        ".apk": "application/vnd.android.package-archive",
+        ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     })
     
     # Use ThreadingHTTPServer for concurrent, multi-threaded requests (essential for iOS & Chrome)
